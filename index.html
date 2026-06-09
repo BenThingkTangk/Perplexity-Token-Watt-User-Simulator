@@ -9,13 +9,24 @@
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800,900&f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
 
   <style>
+   <!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATOM | Tokens / Watt / User Engine + Assistant</title>
+
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800,900&f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
+
+  <style>
     :root,
     [data-theme="light"] {
-      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
-      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.35rem);
-      --text-xl: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+      --text-xs: clamp(0.75rem, 0.72rem + 0.2vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.82rem + 0.24vw, 1rem);
+      --text-base: clamp(1rem, 0.96rem + 0.22vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1.04rem + 0.34vw, 1.35rem);
+      --text-xl: clamp(1.4rem, 1.2rem + 0.8vw, 2rem);
 
       --space-1: 0.25rem;
       --space-2: 0.5rem;
@@ -27,29 +38,31 @@
       --space-10: 2.5rem;
       --space-12: 3rem;
       --space-16: 4rem;
-      --space-20: 5rem;
 
       --font-display: "Cabinet Grotesk", "Inter", sans-serif;
       --font-body: "Satoshi", "Inter", sans-serif;
-      --font-mono: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
+      --font-mono: "SFMono-Regular", Consolas, Monaco, monospace;
 
       --color-bg: #f6f8fb;
-      --color-surface: rgba(255,255,255,0.8);
-      --color-surface-2: rgba(255,255,255,0.92);
-      --color-surface-3: rgba(239,245,252,0.92);
-      --color-border: rgba(8, 20, 38, 0.1);
-      --color-divider: rgba(8, 20, 38, 0.08);
+      --color-surface: rgba(255,255,255,0.76);
+      --color-surface-2: rgba(255,255,255,0.9);
+      --color-surface-3: rgba(242,247,252,0.92);
+      --color-border: rgba(8,20,38,0.1);
+      --color-divider: rgba(8,20,38,0.08);
       --color-text: #081426;
-      --color-text-muted: #5b6b7f;
-      --color-text-faint: #8e9baa;
+      --color-text-muted: #5c6f83;
+      --color-text-faint: #8da0b0;
       --color-primary: #00d4e8;
       --color-primary-strong: #00f0ff;
-      --color-primary-deep: #00a4b4;
-      --color-primary-soft: rgba(0, 212, 232, 0.12);
+      --color-primary-soft: rgba(0,212,232,0.12);
       --color-success: #00d68f;
       --color-warning: #ffb648;
       --color-error: #ff5d7a;
       --color-gold: #f7ba45;
+      --color-confirmed: #7df5c8;
+      --color-high: #99efff;
+      --color-tentative: #ffd493;
+      --color-review: #ffb3c1;
 
       --radius-sm: 0.5rem;
       --radius-md: 0.875rem;
@@ -58,34 +71,36 @@
       --radius-full: 999px;
 
       --shadow-sm: 0 1px 2px rgba(7, 13, 24, 0.04);
-      --shadow-md: 0 12px 32px rgba(7, 13, 24, 0.08);
+      --shadow-md: 0 12px 34px rgba(7, 13, 24, 0.08);
       --shadow-lg: 0 24px 60px rgba(7, 13, 24, 0.12);
 
-      --content-wide: 1320px;
-      --nav-h: 72px;
-      --dock-h: 58px;
-      --section-pad-y: clamp(88px, 8vw, 128px);
+      --topbar-h: 72px;
+      --container: 1620px;
+      --assistant-w: 390px;
       --transition: 220ms cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     [data-theme="dark"] {
       --color-bg: #050914;
-      --color-surface: rgba(14, 19, 32, 0.7);
-      --color-surface-2: rgba(18, 25, 42, 0.82);
-      --color-surface-3: rgba(11, 17, 29, 0.92);
+      --color-surface: rgba(14,19,32,0.72);
+      --color-surface-2: rgba(18,25,42,0.84);
+      --color-surface-3: rgba(10,16,29,0.95);
       --color-border: rgba(255,255,255,0.09);
       --color-divider: rgba(255,255,255,0.06);
       --color-text: #eef7ff;
-      --color-text-muted: #92a5bb;
-      --color-text-faint: #60738a;
+      --color-text-muted: #93a8bf;
+      --color-text-faint: #61748b;
       --color-primary: #00d4e8;
       --color-primary-strong: #66f6ff;
-      --color-primary-deep: #00a8b8;
-      --color-primary-soft: rgba(0, 212, 232, 0.1);
+      --color-primary-soft: rgba(0,212,232,0.1);
       --color-success: #00d68f;
       --color-warning: #ffb648;
       --color-error: #ff5d7a;
       --color-gold: #f7ba45;
+      --color-confirmed: #7df5c8;
+      --color-high: #99efff;
+      --color-tentative: #ffd493;
+      --color-review: #ffb3c1;
 
       --shadow-sm: 0 1px 2px rgba(0,0,0,0.18);
       --shadow-md: 0 14px 40px rgba(0,0,0,0.28);
@@ -95,18 +110,17 @@
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme]) {
         --color-bg: #050914;
-        --color-surface: rgba(14, 19, 32, 0.7);
-        --color-surface-2: rgba(18, 25, 42, 0.82);
-        --color-surface-3: rgba(11, 17, 29, 0.92);
+        --color-surface: rgba(14,19,32,0.72);
+        --color-surface-2: rgba(18,25,42,0.84);
+        --color-surface-3: rgba(10,16,29,0.95);
         --color-border: rgba(255,255,255,0.09);
         --color-divider: rgba(255,255,255,0.06);
         --color-text: #eef7ff;
-        --color-text-muted: #92a5bb;
-        --color-text-faint: #60738a;
+        --color-text-muted: #93a8bf;
+        --color-text-faint: #61748b;
         --color-primary: #00d4e8;
         --color-primary-strong: #66f6ff;
-        --color-primary-deep: #00a8b8;
-        --color-primary-soft: rgba(0, 212, 232, 0.1);
+        --color-primary-soft: rgba(0,212,232,0.1);
         --color-success: #00d68f;
         --color-warning: #ffb648;
         --color-error: #ff5d7a;
@@ -118,7 +132,7 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-snap-type: y mandatory;
+      scroll-snap-type: y proximity;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       text-size-adjust: none;
@@ -132,10 +146,10 @@
       line-height: 1.55;
       color: var(--color-text);
       background:
-        radial-gradient(circle at 10% 10%, rgba(0, 212, 232, 0.14), transparent 28%),
-        radial-gradient(circle at 85% 15%, rgba(102, 246, 255, 0.08), transparent 24%),
-        radial-gradient(circle at 70% 80%, rgba(0, 214, 143, 0.08), transparent 20%),
-        linear-gradient(180deg, #040811 0%, #050914 45%, #07111c 100%);
+        radial-gradient(circle at 8% 10%, rgba(0,212,232,0.13), transparent 28%),
+        radial-gradient(circle at 82% 18%, rgba(102,246,255,0.08), transparent 24%),
+        radial-gradient(circle at 75% 78%, rgba(0,214,143,0.06), transparent 24%),
+        linear-gradient(180deg, #040812 0%, #050914 48%, #07101b 100%);
       background-color: var(--color-bg);
     }
 
@@ -143,37 +157,38 @@
       content: "";
       position: fixed;
       inset: 0;
-      pointer-events: none;
       z-index: 0;
+      pointer-events: none;
       background:
-        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
-      background-size: 40px 40px;
-      mask-image: radial-gradient(circle at center, black 35%, transparent 100%);
-      opacity: 0.35;
+        linear-gradient(rgba(255,255,255,0.016) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.016) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: radial-gradient(circle at center, black 34%, transparent 100%);
+      opacity: 0.36;
     }
 
     body::after {
       content: "";
       position: fixed;
       inset: 0;
-      pointer-events: none;
       z-index: 0;
+      pointer-events: none;
       background: repeating-linear-gradient(
         to bottom,
-        rgba(255,255,255,0.018) 0px,
-        rgba(255,255,255,0.018) 1px,
+        rgba(255,255,255,0.02) 0px,
+        rgba(255,255,255,0.02) 1px,
         transparent 1px,
         transparent 3px
       );
-      opacity: 0.08;
+      opacity: 0.06;
       mix-blend-mode: screen;
     }
 
     img, svg, canvas { display: block; max-width: 100%; }
-    button, input, select, textarea { font: inherit; color: inherit; }
-    button { cursor: pointer; background: none; border: none; }
-    table { width: 100%; border-collapse: collapse; }
+    button, input, textarea, select { font: inherit; color: inherit; }
+    button { cursor: pointer; border: none; background: none; }
+    input { border: none; outline: none; background: transparent; }
+    table { border-collapse: collapse; width: 100%; }
 
     a, button, input, textarea, select {
       transition:
@@ -198,7 +213,7 @@
       margin: -1px;
       padding: 0;
       overflow: hidden;
-      clip: rect(0,0,0,0);
+      clip: rect(0 0 0 0);
       white-space: nowrap;
       border: 0;
     }
@@ -206,28 +221,29 @@
     .app-shell {
       position: relative;
       z-index: 1;
+      min-height: 100dvh;
     }
 
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 60;
-      height: var(--nav-h);
+      z-index: 80;
+      height: var(--topbar-h);
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 0 var(--space-4);
-      backdrop-filter: blur(16px);
       background: color-mix(in oklab, var(--color-bg) 72%, transparent);
       border-bottom: 1px solid var(--color-divider);
+      backdrop-filter: blur(18px);
     }
 
     .topbar-inner {
-      width: min(100%, var(--content-wide));
+      width: min(100%, var(--container));
       display: grid;
       grid-template-columns: auto 1fr auto;
-      align-items: center;
       gap: var(--space-4);
+      align-items: center;
     }
 
     .brand {
@@ -237,10 +253,32 @@
       min-width: 0;
     }
 
-    .brand-lockup {
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      color: var(--color-primary);
+      filter: drop-shadow(0 0 16px rgba(0,212,232,0.24));
+      flex-shrink: 0;
+    }
+
+    .orbit-core {
+      transform-origin: 50% 50%;
+      animation: spin 12s linear infinite;
+    }
+
+    .orbit-core-2 {
+      transform-origin: 50% 50%;
+      animation: spin-rev 8s linear infinite;
+    }
+
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes spin-rev { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+
+    .brand-copy {
       display: flex;
       flex-direction: column;
       gap: 2px;
+      min-width: 0;
     }
 
     .brand-kicker {
@@ -257,33 +295,9 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--color-text);
-    }
-
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-      color: var(--color-primary);
-      filter: drop-shadow(0 0 18px rgba(0,212,232,0.25));
-    }
-
-    .orbit-core {
-      transform-origin: 50% 50%;
-      animation: spin-slow 12s linear infinite;
-    }
-
-    .orbit-ring-2 {
-      transform-origin: 50% 50%;
-      animation: spin-rev 9s linear infinite;
-    }
-
-    @keyframes spin-slow {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    @keyframes spin-rev {
-      from { transform: rotate(360deg); }
-      to { transform: rotate(0deg); }
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .nav-tabs {
@@ -293,8 +307,8 @@
       gap: var(--space-2);
       padding: 6px;
       border-radius: var(--radius-full);
-      background: color-mix(in oklab, var(--color-surface-2) 92%, transparent);
       border: 1px solid var(--color-border);
+      background: color-mix(in oklab, var(--color-surface-2) 92%, transparent);
       box-shadow: var(--shadow-sm);
       overflow-x: auto;
       max-width: 100%;
@@ -304,14 +318,15 @@
     .nav-tabs::-webkit-scrollbar { display: none; }
 
     .nav-btn {
+      min-height: 42px;
+      padding: 0.72rem 0.98rem;
       border-radius: var(--radius-full);
-      padding: 0.72rem 1rem;
       font-size: var(--text-sm);
-      font-weight: 700;
-      color: var(--color-text-muted);
-      white-space: nowrap;
+      font-weight: 800;
       letter-spacing: 0.04em;
       text-transform: uppercase;
+      color: var(--color-text-muted);
+      white-space: nowrap;
     }
 
     .nav-btn:hover {
@@ -320,62 +335,49 @@
     }
 
     .nav-btn.active {
-      color: #06111a;
+      color: #041019;
       background: linear-gradient(135deg, var(--color-primary), var(--color-primary-strong));
-      box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 10px 30px rgba(0,212,232,0.24);
+      box-shadow: 0 10px 28px rgba(0,212,232,0.24);
     }
 
     .topbar-actions {
       display: inline-flex;
-      align-items: center;
       gap: var(--space-2);
+      align-items: center;
       justify-self: end;
     }
 
-    .atom-chip,
-    .icon-btn,
-    .status-chip {
+    .pill-chip, .icon-btn {
       border: 1px solid var(--color-border);
       background: color-mix(in oklab, var(--color-surface) 88%, transparent);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
     }
 
-    .atom-chip {
+    .pill-chip {
       display: inline-flex;
       align-items: center;
-      gap: var(--space-2);
-      padding: 0.72rem 0.95rem;
+      gap: 8px;
+      min-height: 42px;
+      padding: 0.68rem 0.9rem;
       border-radius: var(--radius-full);
       font-size: var(--text-xs);
-      font-weight: 700;
-      color: var(--color-text-muted);
+      font-weight: 800;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-    }
-
-    .status-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-2);
-      padding: 0.62rem 0.82rem;
-      border-radius: var(--radius-full);
-      font-size: var(--text-xs);
       color: var(--color-text-muted);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
     }
 
-    .status-dot {
+    .live-dot {
       width: 8px;
       height: 8px;
       border-radius: 50%;
       background: var(--color-success);
-      box-shadow: 0 0 0 0 rgba(0,214,143,0.5);
+      box-shadow: 0 0 0 0 rgba(0,214,143,0.46);
       animation: pulse 1.9s ease-out infinite;
     }
 
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(0,214,143,0.45); }
+      0% { box-shadow: 0 0 0 0 rgba(0,214,143,0.46); }
       70% { box-shadow: 0 0 0 12px rgba(0,214,143,0); }
       100% { box-shadow: 0 0 0 0 rgba(0,214,143,0); }
     }
@@ -395,24 +397,43 @@
       box-shadow: var(--shadow-sm);
     }
 
-    .deck-dock {
+    .workspace {
+      width: min(100%, var(--container));
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) var(--assistant-w);
+      gap: var(--space-6);
+      padding: var(--space-5) var(--space-4) var(--space-12);
+      align-items: start;
+      position: relative;
+    }
+
+    .main-stage {
+      min-width: 0;
+    }
+
+    .assistant-toggle-mobile {
+      display: none;
+    }
+
+    .dock-dots {
       position: fixed;
-      right: 18px;
+      right: calc(var(--assistant-w) + 34px);
       top: 50%;
       transform: translateY(-50%);
-      z-index: 55;
+      z-index: 60;
       display: flex;
       flex-direction: column;
       gap: 12px;
       padding: 10px;
       border-radius: 999px;
-      background: color-mix(in oklab, var(--color-surface-2) 82%, transparent);
       border: 1px solid var(--color-border);
+      background: color-mix(in oklab, var(--color-surface-2) 84%, transparent);
       backdrop-filter: blur(16px);
       box-shadow: var(--shadow-md);
     }
 
-    .deck-dot {
+    .dock-dot {
       width: 11px;
       height: 11px;
       border-radius: 50%;
@@ -421,98 +442,95 @@
       position: relative;
     }
 
-    .deck-dot.active {
+    .dock-dot.active {
+      transform: scale(1.22);
       background: var(--color-primary);
-      box-shadow: 0 0 20px rgba(0,212,232,0.5);
-      transform: scale(1.2);
+      box-shadow: 0 0 20px rgba(0,212,232,0.48);
     }
 
-    .deck-dot::after {
+    .dock-dot::after {
       content: attr(data-label);
       position: absolute;
-      right: calc(100% + 14px);
+      right: calc(100% + 12px);
       top: 50%;
       transform: translateY(-50%);
       padding: 6px 10px;
       border-radius: var(--radius-full);
+      background: color-mix(in oklab, var(--color-surface-3) 96%, transparent);
+      border: 1px solid var(--color-border);
+      color: var(--color-text);
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       white-space: nowrap;
-      color: var(--color-text);
-      background: color-mix(in oklab, var(--color-surface-3) 96%, transparent);
-      border: 1px solid var(--color-border);
       opacity: 0;
       pointer-events: none;
       transition: opacity var(--transition), transform var(--transition);
     }
 
-    .deck-dot:hover::after,
-    .deck-dot.active::after {
+    .dock-dot:hover::after,
+    .dock-dot.active::after {
       opacity: 1;
       transform: translateY(-50%) translateX(-2px);
     }
 
     .section {
-      min-height: 100dvh;
+      min-height: calc(100dvh - var(--topbar-h) - var(--space-5));
       scroll-snap-align: start;
-      scroll-snap-stop: always;
       display: flex;
       align-items: center;
-      padding: calc(var(--nav-h) + var(--space-6)) var(--space-4) var(--section-pad-y);
+      padding: var(--space-6) 0;
       position: relative;
-      overflow: hidden;
     }
 
     .section::before {
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(circle at 15% 20%, rgba(0,212,232,0.08), transparent 24%),
-        radial-gradient(circle at 80% 80%, rgba(102,246,255,0.05), transparent 22%);
       pointer-events: none;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(0,212,232,0.08), transparent 28%),
+        radial-gradient(circle at 82% 80%, rgba(102,246,255,0.05), transparent 24%);
     }
 
     .section-inner {
-      width: min(100%, var(--content-wide));
-      margin-inline: auto;
+      width: 100%;
       position: relative;
-      z-index: 2;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: var(--space-8);
-      align-items: stretch;
+      z-index: 1;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: var(--space-2);
+      gap: 8px;
       padding: 0.46rem 0.8rem;
       border-radius: var(--radius-full);
-      border: 1px solid rgba(0, 212, 232, 0.18);
-      background: rgba(0, 212, 232, 0.08);
+      border: 1px solid rgba(0,212,232,0.18);
+      background: rgba(0,212,232,0.08);
       font-size: var(--text-xs);
-      font-weight: 700;
-      color: var(--color-primary-strong);
+      font-weight: 800;
       letter-spacing: 0.16em;
       text-transform: uppercase;
+      color: var(--color-primary-strong);
       width: fit-content;
       margin-bottom: var(--space-4);
     }
 
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: var(--space-6);
+      align-items: stretch;
+    }
+
     .hero-copy h1 {
       font-family: var(--font-display);
-      font-size: clamp(2.2rem, 4vw, 4.6rem);
+      font-size: clamp(2.1rem, 3.6vw, 4.2rem);
       line-height: 0.95;
       font-weight: 900;
-      letter-spacing: -0.04em;
-      max-width: 11ch;
+      letter-spacing: -0.05em;
+      max-width: 12ch;
       margin-bottom: var(--space-4);
     }
 
@@ -522,26 +540,26 @@
     }
 
     .hero-sub {
-      max-width: 62ch;
       color: var(--color-text-muted);
-      font-size: clamp(1rem, 1rem + 0.25vw, 1.15rem);
+      max-width: 62ch;
       margin-bottom: var(--space-6);
+      font-size: var(--text-base);
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: var(--space-3);
-      margin-bottom: var(--space-8);
+      margin-bottom: var(--space-6);
     }
 
     .btn {
+      min-height: 48px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: var(--space-2);
+      gap: 8px;
       padding: 0.95rem 1.15rem;
-      min-height: 48px;
       border-radius: var(--radius-full);
       font-size: var(--text-sm);
       font-weight: 800;
@@ -551,46 +569,47 @@
     }
 
     .btn-primary {
-      color: #06111a;
+      color: #05111a;
       background: linear-gradient(135deg, var(--color-primary), var(--color-primary-strong));
-      box-shadow: 0 18px 50px rgba(0,212,232,0.22);
+      box-shadow: 0 16px 42px rgba(0,212,232,0.24);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 24px 60px rgba(0,212,232,0.28);
+      box-shadow: 0 22px 58px rgba(0,212,232,0.3);
     }
 
     .btn-secondary {
       color: var(--color-text);
-      background: color-mix(in oklab, var(--color-surface-2) 88%, transparent);
       border-color: var(--color-border);
+      background: color-mix(in oklab, var(--color-surface-2) 90%, transparent);
     }
 
     .btn-secondary:hover {
       transform: translateY(-2px);
-      border-color: rgba(0, 212, 232, 0.28);
+      border-color: rgba(0,212,232,0.22);
       box-shadow: var(--shadow-sm);
+    }
+
+    .panel,
+    .card,
+    .metric-card,
+    .assistant-card,
+    .control-card,
+    .trace-card,
+    .result-board,
+    .table-wrap {
+      background: color-mix(in oklab, var(--color-surface-2) 92%, transparent);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-md);
+      backdrop-filter: blur(18px);
     }
 
     .metrics-row {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: var(--space-4);
-    }
-
-    .panel,
-    .metric-card,
-    .glass-card,
-    .control-card,
-    .trace-card,
-    .matrix-card,
-    .thesis-card {
-      background: color-mix(in oklab, var(--color-surface-2) 92%, transparent);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow-md);
-      backdrop-filter: blur(18px);
     }
 
     .metric-card {
@@ -607,16 +626,15 @@
 
     .metric-value {
       font-family: var(--font-display);
-      font-size: clamp(1.8rem, 2.4vw, 2.8rem);
+      font-size: clamp(1.8rem, 2vw, 2.7rem);
       line-height: 1;
       font-weight: 900;
-      color: var(--color-text);
       margin-bottom: 8px;
     }
 
     .metric-card.primary .metric-value {
       color: var(--color-primary-strong);
-      text-shadow: 0 0 26px rgba(0,212,232,0.2);
+      text-shadow: 0 0 24px rgba(0,212,232,0.2);
     }
 
     .metric-card.success .metric-value { color: var(--color-success); }
@@ -632,7 +650,6 @@
       display: flex;
       flex-direction: column;
       gap: var(--space-4);
-      justify-content: stretch;
     }
 
     .stat-frame {
@@ -645,70 +662,105 @@
     .stat-frame::before {
       content: "";
       position: absolute;
-      inset: auto -8% -35% auto;
       width: 240px;
       height: 240px;
+      right: -60px;
+      bottom: -100px;
+      border-radius: 50%;
       background: radial-gradient(circle, rgba(0,212,232,0.18), transparent 65%);
-      filter: blur(6px);
-      pointer-events: none;
+      filter: blur(12px);
     }
 
-    .frame-head {
+    .frame-head,
+    .section-head,
+    .result-top,
+    .assistant-top {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       gap: var(--space-3);
-      margin-bottom: var(--space-5);
     }
 
-    .frame-title {
+    .frame-title,
+    .card-kicker,
+    .result-kicker,
+    .assistant-label,
+    .small-kicker {
       font-size: var(--text-xs);
       color: var(--color-text-faint);
       letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
-    .mode-pill {
+    .mode-pill, .confidence-pill, .meta-pill, .risk-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      width: fit-content;
       padding: 0.45rem 0.7rem;
       border-radius: var(--radius-full);
       font-size: 11px;
-      font-weight: 700;
-      color: var(--color-primary-strong);
-      border: 1px solid rgba(0,212,232,0.18);
-      background: rgba(0,212,232,0.08);
-      letter-spacing: 0.14em;
+      font-weight: 800;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
+      border: 1px solid transparent;
     }
 
-    .big-kpi {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-3);
-      align-items: flex-start;
-      justify-content: center;
-      min-height: 120px;
+    .mode-pill {
+      color: var(--color-primary-strong);
+      background: rgba(0,212,232,0.08);
+      border-color: rgba(0,212,232,0.18);
     }
 
-    .big-number {
+    .confidence-pill.confirmed {
+      color: var(--color-confirmed);
+      background: rgba(0,214,143,0.08);
+      border-color: rgba(0,214,143,0.18);
+    }
+
+    .confidence-pill.high {
+      color: var(--color-high);
+      background: rgba(0,212,232,0.08);
+      border-color: rgba(0,212,232,0.18);
+    }
+
+    .confidence-pill.tentative {
+      color: var(--color-tentative);
+      background: rgba(247,186,69,0.08);
+      border-color: rgba(247,186,69,0.18);
+    }
+
+    .confidence-pill.review {
+      color: var(--color-review);
+      background: rgba(255,93,122,0.08);
+      border-color: rgba(255,93,122,0.18);
+    }
+
+    .big-number,
+    .result-value {
       display: flex;
       align-items: flex-end;
       gap: 10px;
       flex-wrap: wrap;
     }
 
-    .big-number .odometer {
-      font-family: var(--font-display);
-      font-size: clamp(3.2rem, 6vw, 5.8rem);
-      line-height: 0.9;
-      font-weight: 900;
-      letter-spacing: -0.06em;
-      color: var(--color-primary-strong);
-      text-shadow: 0 0 30px rgba(0,212,232,0.26);
+    .odometer {
       display: inline-flex;
       gap: 2px;
+      font-family: var(--font-display);
+      font-weight: 900;
+      letter-spacing: -0.06em;
+      line-height: 0.9;
+      color: var(--color-primary-strong);
+      text-shadow: 0 0 28px rgba(0,212,232,0.26);
+    }
+
+    .hero-odo {
+      font-size: clamp(3.2rem, 5.2vw, 5.6rem);
+    }
+
+    .result-odo {
+      font-size: clamp(2.8rem, 4.8vw, 4.8rem);
     }
 
     .odometer-column {
@@ -716,41 +768,40 @@
       overflow: hidden;
       display: inline-flex;
       flex-direction: column;
-      transition: transform 1.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 1.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .odometer-column span {
       display: block;
-      line-height: 1em;
-      min-width: 0.66ch;
       text-align: center;
+      min-width: 0.66ch;
+      line-height: 1em;
     }
 
     .odometer-sep {
       display: inline-flex;
       align-items: center;
-      color: var(--color-primary-strong);
-      opacity: 0.95;
+      opacity: 0.96;
     }
 
-    .big-unit {
+    .big-unit,
+    .result-subunit {
       font-size: var(--text-sm);
       color: var(--color-text-muted);
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      padding-bottom: 0.6rem;
+      padding-bottom: 0.46rem;
     }
 
     .delta-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      width: fit-content;
       padding: 0.7rem 0.9rem;
       border-radius: var(--radius-full);
-      color: var(--color-success);
       background: rgba(0,214,143,0.1);
       border: 1px solid rgba(0,214,143,0.18);
+      color: var(--color-success);
       font-size: var(--text-sm);
       font-weight: 800;
       letter-spacing: 0.04em;
@@ -786,57 +837,36 @@
     }
 
     .section-head {
-      display: flex;
       flex-wrap: wrap;
-      align-items: end;
-      justify-content: space-between;
-      gap: var(--space-5);
       margin-bottom: var(--space-6);
     }
 
     .section-title {
       font-family: var(--font-display);
-      font-size: clamp(1.8rem, 2vw, 2.7rem);
+      font-size: clamp(1.8rem, 1.9vw, 2.6rem);
       line-height: 1;
-      letter-spacing: -0.04em;
       font-weight: 900;
+      letter-spacing: -0.04em;
       margin-bottom: 10px;
     }
 
     .section-title .accent { color: var(--color-primary-strong); }
 
     .section-desc {
-      max-width: 70ch;
       color: var(--color-text-muted);
-      font-size: var(--text-base);
+      max-width: 72ch;
     }
 
-    .grid-2 {
+    .grid-2, .grid-3, .thesis-grid, .result-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: var(--space-5);
     }
 
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: var(--space-5);
-    }
+    .grid-2, .thesis-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3, .result-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
-    .control-card,
-    .glass-card,
-    .trace-card,
-    .matrix-card,
-    .thesis-card {
+    .control-card, .assistant-card, .trace-card, .equation-box, .thesis-card {
       padding: var(--space-5);
-    }
-
-    .card-kicker {
-      font-size: var(--text-xs);
-      color: var(--color-text-faint);
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      margin-bottom: var(--space-3);
     }
 
     .card-title {
@@ -850,18 +880,18 @@
     .card-copy {
       color: var(--color-text-muted);
       font-size: var(--text-sm);
-      max-width: 52ch;
+      max-width: 56ch;
     }
 
-    .slider-stack {
-      margin-top: var(--space-5);
+    .slider-stack, .equation-stack {
       display: grid;
       gap: var(--space-4);
+      margin-top: var(--space-5);
     }
 
     .slider-row {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
+      grid-template-columns: minmax(0,1fr) auto;
       gap: var(--space-3);
       align-items: center;
       padding: var(--space-4);
@@ -877,7 +907,7 @@
 
     .slider-label {
       font-size: var(--text-sm);
-      font-weight: 700;
+      font-weight: 800;
       color: var(--color-text);
     }
 
@@ -888,11 +918,11 @@
     }
 
     .slider-value {
-      min-width: 90px;
+      min-width: 92px;
       text-align: right;
       font-family: var(--font-display);
       font-size: var(--text-lg);
-      font-weight: 800;
+      font-weight: 900;
       color: var(--color-primary-strong);
     }
 
@@ -915,9 +945,9 @@
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-strong));
-      box-shadow: 0 0 0 4px rgba(0,212,232,0.18), 0 0 24px rgba(0,212,232,0.28);
       margin-top: -6px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-strong));
+      box-shadow: 0 0 0 4px rgba(0,212,232,0.16), 0 0 22px rgba(0,212,232,0.28);
       border: 0;
     }
 
@@ -933,69 +963,17 @@
       height: 18px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--color-primary), var(--color-primary-strong));
-      box-shadow: 0 0 0 4px rgba(0,212,232,0.18), 0 0 24px rgba(0,212,232,0.28);
+      box-shadow: 0 0 0 4px rgba(0,212,232,0.16), 0 0 22px rgba(0,212,232,0.28);
       border: 0;
     }
 
     .result-board {
+      padding: clamp(1.2rem, 2vw, 1.9rem);
       margin-top: var(--space-5);
-      padding: clamp(1.2rem, 2.4vw, 2rem);
-      border-radius: var(--radius-xl);
       background:
-        radial-gradient(circle at 50% 25%, rgba(0,212,232,0.14), transparent 48%),
+        radial-gradient(circle at 50% 20%, rgba(0,212,232,0.14), transparent 48%),
         color-mix(in oklab, var(--color-surface-3) 96%, transparent);
-      border: 1px solid rgba(0,212,232,0.16);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02), var(--shadow-md);
-    }
-
-    .result-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: start;
-      gap: var(--space-4);
-      margin-bottom: var(--space-4);
-    }
-
-    .result-kicker {
-      font-size: var(--text-xs);
-      color: var(--color-text-faint);
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .result-value {
-      display: flex;
-      align-items: end;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .result-value .odometer {
-      font-family: var(--font-display);
-      font-size: clamp(2.8rem, 5vw, 4.8rem);
-      line-height: 0.9;
-      font-weight: 900;
-      letter-spacing: -0.06em;
-      color: var(--color-primary-strong);
-      text-shadow: 0 0 32px rgba(0,212,232,0.26);
-      display: inline-flex;
-      gap: 2px;
-    }
-
-    .result-subunit {
-      font-size: var(--text-sm);
-      color: var(--color-text-muted);
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding-bottom: 0.5rem;
-    }
-
-    .result-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: var(--space-4);
-      margin-top: var(--space-5);
+      border-color: rgba(0,212,232,0.16);
     }
 
     .mini-stat {
@@ -1015,9 +993,9 @@
 
     .mini-stat .v {
       font-family: var(--font-display);
-      font-size: clamp(1.5rem, 2vw, 2.3rem);
-      font-weight: 900;
+      font-size: clamp(1.5rem, 1.8vw, 2.2rem);
       line-height: 1;
+      font-weight: 900;
       margin-bottom: 6px;
     }
 
@@ -1033,17 +1011,16 @@
     .trace-card {
       margin-top: var(--space-5);
       background:
-        linear-gradient(180deg, rgba(0, 214, 143, 0.04), rgba(0,0,0,0)),
+        linear-gradient(180deg, rgba(0,214,143,0.04), rgba(0,0,0,0)),
         color-mix(in oklab, var(--color-surface-3) 98%, transparent);
       border-color: rgba(0,214,143,0.14);
     }
 
-    .trace-line {
+    .trace-line, .equation-line {
       font-family: var(--font-mono);
       font-size: 13px;
       line-height: 1.9;
-      color: #9ed8cb;
-      white-space: normal;
+      color: var(--color-text);
     }
 
     .trace-step {
@@ -1058,13 +1035,7 @@
     .trace-calc { color: #7beefe; }
     .trace-result { color: #79f2bf; font-weight: 700; }
 
-    .equation-stack {
-      display: grid;
-      gap: var(--space-4);
-    }
-
     .equation-box {
-      padding: var(--space-5);
       border-radius: var(--radius-xl);
       background: color-mix(in oklab, var(--color-surface-2) 94%, transparent);
       border: 1px solid var(--color-border);
@@ -1079,20 +1050,12 @@
       margin-bottom: var(--space-3);
     }
 
-    .equation-line {
-      font-family: var(--font-mono);
-      font-size: 14px;
-      color: var(--color-text);
-      line-height: 1.9;
-    }
-
     .equation-comment {
-      color: var(--color-text-faint);
       font-size: 12px;
+      color: var(--color-text-faint);
     }
 
-    .info-callout,
-    .warning-callout {
+    .info-callout, .warning-callout {
       margin-top: var(--space-5);
       padding: var(--space-4) var(--space-5);
       border-radius: var(--radius-lg);
@@ -1102,26 +1065,22 @@
 
     .info-callout {
       color: #b6f8ff;
-      background: rgba(0, 212, 232, 0.08);
-      border: 1px solid rgba(0, 212, 232, 0.18);
+      background: rgba(0,212,232,0.08);
+      border: 1px solid rgba(0,212,232,0.18);
     }
 
     .warning-callout {
       color: #ffd493;
-      background: rgba(247, 186, 69, 0.08);
-      border: 1px solid rgba(247, 186, 69, 0.18);
+      background: rgba(247,186,69,0.08);
+      border: 1px solid rgba(247,186,69,0.18);
     }
 
     .table-wrap {
       overflow-x: auto;
-      border-radius: var(--radius-xl);
-      border: 1px solid var(--color-border);
-      background: color-mix(in oklab, var(--color-surface-2) 92%, transparent);
-      box-shadow: var(--shadow-md);
     }
 
     .matrix-table {
-      min-width: 1080px;
+      min-width: 1060px;
     }
 
     th, td {
@@ -1133,19 +1092,17 @@
     }
 
     th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: rgba(255,255,255,0.02);
       font-size: 11px;
       color: var(--color-text-faint);
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      background: rgba(255,255,255,0.02);
-      position: sticky;
-      top: 0;
-      z-index: 1;
     }
 
-    td {
-      color: var(--color-text-muted);
-    }
+    td { color: var(--color-text-muted); }
 
     tbody tr:hover td {
       background: rgba(255,255,255,0.02);
@@ -1163,56 +1120,33 @@
     .pill {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
       padding: 0.3rem 0.62rem;
       border-radius: var(--radius-full);
       font-size: 11px;
+      font-weight: 800;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      font-weight: 800;
       border: 1px solid transparent;
       margin-left: 8px;
     }
 
-    .pill.best {
-      color: #9cf6d0;
-      background: rgba(0,214,143,0.1);
-      border-color: rgba(0,214,143,0.18);
-    }
-
-    .pill.good {
-      color: #9fefff;
-      background: rgba(0,212,232,0.1);
-      border-color: rgba(0,212,232,0.18);
-    }
-
-    .pill.weak {
-      color: #ffb1c0;
-      background: rgba(255,93,122,0.1);
-      border-color: rgba(255,93,122,0.18);
-    }
-
-    .pill.partial {
-      color: #ffd493;
-      background: rgba(247,186,69,0.1);
-      border-color: rgba(247,186,69,0.18);
-    }
+    .pill.best { color: #9cf6d0; background: rgba(0,214,143,0.1); border-color: rgba(0,214,143,0.18); }
+    .pill.good { color: #9fefff; background: rgba(0,212,232,0.1); border-color: rgba(0,212,232,0.18); }
+    .pill.weak { color: #ffb1c0; background: rgba(255,93,122,0.1); border-color: rgba(255,93,122,0.18); }
+    .pill.partial { color: #ffd493; background: rgba(247,186,69,0.1); border-color: rgba(247,186,69,0.18); }
 
     .tick { color: var(--color-success); font-weight: 900; }
     .cross { color: var(--color-error); font-weight: 900; }
     .partial { color: var(--color-warning); font-weight: 900; }
 
-    .thesis-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: var(--space-5);
-      margin-bottom: var(--space-5);
-    }
-
     .thesis-card {
-      min-height: 240px;
+      min-height: 220px;
       position: relative;
       overflow: hidden;
+      background: color-mix(in oklab, var(--color-surface-2) 94%, transparent);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-md);
     }
 
     .thesis-card::after {
@@ -1258,46 +1192,320 @@
       gap: var(--space-3);
       padding: 0.9rem 1rem;
       border-radius: var(--radius-full);
+      border: 1px solid var(--color-border);
+      background: color-mix(in oklab, var(--color-surface-2) 88%, transparent);
+      color: var(--color-text-faint);
       font-size: var(--text-xs);
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--color-text-faint);
+    }
+
+    .assistant-panel {
+      position: sticky;
+      top: calc(var(--topbar-h) + var(--space-5));
+      height: calc(100dvh - var(--topbar-h) - var(--space-10));
+      display: grid;
+      grid-template-rows: auto auto auto auto 1fr auto;
+      gap: var(--space-4);
+      min-width: 0;
+      z-index: 50;
+    }
+
+    .assistant-card {
+      background: color-mix(in oklab, var(--color-surface-2) 94%, transparent);
+    }
+
+    .assistant-header {
+      display: grid;
+      gap: var(--space-4);
+    }
+
+    .assistant-title {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .assistant-sub {
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+
+    .assistant-mode-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .mode-btn {
+      min-height: 38px;
+      padding: 0.6rem 0.78rem;
+      border-radius: var(--radius-full);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
       border: 1px solid var(--color-border);
-      background: color-mix(in oklab, var(--color-surface-2) 88%, transparent);
+      background: rgba(255,255,255,0.02);
+      color: var(--color-text-muted);
+    }
+
+    .mode-btn:hover {
+      color: var(--color-text);
+      border-color: rgba(0,212,232,0.18);
+    }
+
+    .mode-btn.active {
+      color: #041019;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-strong));
+      border-color: transparent;
+    }
+
+    .assistant-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 10px;
+    }
+
+    .assistant-mini {
+      padding: 12px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+      background: color-mix(in oklab, var(--color-surface-3) 96%, transparent);
+      min-width: 0;
+    }
+
+    .assistant-mini .v {
+      color: var(--color-text);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      margin-top: 6px;
+      word-break: break-word;
+    }
+
+    .profile-list, .evidence-list, .audit-list, .action-list {
+      display: grid;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .profile-row, .evidence-item, .audit-item, .action-item {
+      padding: 12px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+      background: color-mix(in oklab, var(--color-surface-3) 96%, transparent);
+    }
+
+    .profile-row strong,
+    .evidence-item strong,
+    .audit-item strong,
+    .action-item strong {
+      color: var(--color-text);
+      font-weight: 800;
+    }
+
+    .profile-row,
+    .evidence-item,
+    .audit-item,
+    .action-item,
+    .assistant-body-copy {
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+
+    .assistant-response {
+      display: grid;
+      gap: var(--space-4);
+      min-height: 0;
+    }
+
+    .response-block {
+      display: grid;
+      gap: 10px;
+    }
+
+    .response-title {
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .response-main {
+      color: var(--color-text);
+      font-size: var(--text-base);
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .execution-state {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      padding: 12px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+      background: rgba(255,255,255,0.02);
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+
+    .suggested-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 10px;
+    }
+
+    .suggest-btn {
+      min-height: 46px;
+      text-align: left;
+      padding: 12px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+      background: color-mix(in oklab, var(--color-surface-3) 96%, transparent);
+      color: var(--color-text);
+      font-size: var(--text-sm);
+      font-weight: 700;
+    }
+
+    .suggest-btn:hover {
+      transform: translateY(-1px);
+      border-color: rgba(0,212,232,0.18);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .risk-pill.low {
+      color: var(--color-high);
+      background: rgba(0,212,232,0.08);
+      border-color: rgba(0,212,232,0.18);
+    }
+
+    .risk-pill.medium {
+      color: var(--color-tentative);
+      background: rgba(247,186,69,0.08);
+      border-color: rgba(247,186,69,0.18);
+    }
+
+    .risk-pill.high {
+      color: var(--color-review);
+      background: rgba(255,93,122,0.08);
+      border-color: rgba(255,93,122,0.18);
+    }
+
+    .action-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .action-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .tiny-btn {
+      min-height: 36px;
+      padding: 0.6rem 0.75rem;
+      border-radius: var(--radius-full);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--color-border);
+      background: rgba(255,255,255,0.03);
+      color: var(--color-text);
+    }
+
+    .tiny-btn.primary {
+      color: #05111a;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-strong));
+    }
+
+    .tiny-btn:hover { transform: translateY(-1px); }
+
+    .assistant-scroll {
+      min-height: 0;
+      overflow: auto;
+      padding-right: 2px;
+      display: grid;
+      gap: var(--space-4);
+      scrollbar-width: thin;
+    }
+
+    .assistant-input-wrap {
+      display: grid;
+      gap: 10px;
+    }
+
+    .assistant-input-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      padding: 10px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      background: color-mix(in oklab, var(--color-surface-3) 96%, transparent);
+    }
+
+    .assistant-input {
+      min-width: 0;
+      color: var(--color-text);
+      font-size: var(--text-sm);
+    }
+
+    .assistant-input::placeholder {
+      color: var(--color-text-faint);
+    }
+
+    .audit-note {
+      color: var(--color-text-faint);
+      font-size: 12px;
     }
 
     .kbd {
-      font-family: var(--font-mono);
-      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 1.7rem;
       padding: 0.2rem 0.45rem;
       border-radius: 8px;
       border: 1px solid var(--color-border);
       background: rgba(255,255,255,0.04);
       color: var(--color-text);
+      font-family: var(--font-mono);
+      font-size: 12px;
     }
 
-    .presentation-banner {
+    .banner {
       position: fixed;
       left: 50%;
       bottom: 18px;
       transform: translateX(-50%);
-      z-index: 70;
+      z-index: 80;
       display: inline-flex;
       align-items: center;
-      gap: var(--space-3);
+      gap: 12px;
       padding: 0.82rem 1rem;
       border-radius: var(--radius-full);
       border: 1px solid var(--color-border);
-      background: color-mix(in oklab, var(--color-surface-2) 86%, transparent);
-      backdrop-filter: blur(16px);
+      background: color-mix(in oklab, var(--color-surface-2) 84%, transparent);
       box-shadow: var(--shadow-md);
-      font-size: var(--text-xs);
+      backdrop-filter: blur(16px);
       color: var(--color-text-muted);
+      font-size: var(--text-xs);
       letter-spacing: 0.14em;
       text-transform: uppercase;
     }
 
-    .presentation-banner strong {
+    .banner strong {
       color: var(--color-primary-strong);
       font-weight: 800;
     }
@@ -1313,26 +1521,55 @@
       transform: translateY(0);
     }
 
-    .presentation-mode .topbar {
+    body.presentation-mode .topbar {
       transform: translateY(-100%);
       opacity: 0;
       pointer-events: none;
     }
 
-    .presentation-mode .presentation-banner {
-      bottom: 12px;
+    body.presentation-mode .assistant-panel {
+      top: var(--space-4);
+      height: calc(100dvh - var(--space-8));
     }
 
-    .presentation-mode .section {
-      padding-top: var(--space-8);
+    @media (max-width: 1420px) {
+      .workspace {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .assistant-panel {
+        position: fixed;
+        right: 0;
+        top: var(--topbar-h);
+        width: min(92vw, 420px);
+        height: calc(100dvh - var(--topbar-h));
+        padding: var(--space-4);
+        background: color-mix(in oklab, var(--color-bg) 90%, transparent);
+        border-left: 1px solid var(--color-border);
+        transform: translateX(100%);
+        transition: transform var(--transition);
+      }
+
+      body.assistant-open .assistant-panel {
+        transform: translateX(0);
+      }
+
+      .assistant-toggle-mobile {
+        display: inline-grid;
+      }
+
+      .dock-dots {
+        right: 18px;
+      }
     }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1120px) {
       .hero-grid,
       .grid-2,
-      .thesis-grid,
+      .grid-3,
       .result-grid,
-      .metrics-row {
+      .metrics-row,
+      .thesis-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1341,41 +1578,45 @@
       }
 
       .nav-tabs {
-        order: 3;
         justify-self: stretch;
+        order: 3;
       }
 
       .topbar-actions {
-        order: 2;
         justify-self: start;
         flex-wrap: wrap;
+        order: 2;
       }
 
       .brand {
         order: 1;
-      }
-    }
-
-    @media (max-width: 900px) {
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-
-      .section {
-        padding-inline: var(--space-3);
-      }
-
-      .deck-dock {
-        display: none;
       }
 
       .hero-copy h1 {
         max-width: 100%;
       }
 
-      .result-top {
+      .spark-caption,
+      .result-top,
+      .frame-head {
         flex-direction: column;
         align-items: flex-start;
+      }
+
+      .suggested-actions,
+      .assistant-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .dock-dots {
+        display: none;
+      }
+
+      .section {
+        min-height: auto;
+        padding: var(--space-5) 0;
       }
 
       .slider-row {
@@ -1388,29 +1629,27 @@
     }
 
     @media (max-width: 640px) {
-      :root {
-        --nav-h: 64px;
-      }
+      :root { --topbar-h: 64px; }
 
       .topbar {
         padding-inline: var(--space-3);
       }
 
-      .topbar-actions {
-        gap: 8px;
-      }
-
-      .atom-chip,
-      .status-chip {
+      .pill-chip:not(.assistant-toggle-mobile) {
         display: none;
       }
 
-      .presentation-banner {
+      .banner {
         left: 12px;
         right: 12px;
         transform: none;
         justify-content: center;
         text-align: center;
+        flex-wrap: wrap;
+      }
+
+      .assistant-panel {
+        width: 100vw;
       }
     }
 
@@ -1430,31 +1669,38 @@
   <div class="app-shell">
     <header class="topbar">
       <div class="topbar-inner">
-        <div class="brand" aria-label="ATOM brand">
+        <div class="brand">
           <svg class="brand-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
             <circle cx="32" cy="32" r="4.8" fill="currentColor"></circle>
             <g class="orbit-core">
               <ellipse cx="32" cy="32" rx="23" ry="10.5" stroke="currentColor" stroke-width="1.7" opacity="0.95"></ellipse>
-              <ellipse cx="32" cy="32" rx="23" ry="10.5" stroke="currentColor" stroke-width="1.7" opacity="0.5" transform="rotate(60 32 32)"></ellipse>
+              <ellipse cx="32" cy="32" rx="23" ry="10.5" stroke="currentColor" stroke-width="1.7" opacity="0.52" transform="rotate(60 32 32)"></ellipse>
             </g>
-            <g class="orbit-ring-2">
-              <ellipse cx="32" cy="32" rx="23" ry="10.5" stroke="currentColor" stroke-width="1.7" opacity="0.34" transform="rotate(120 32 32)"></ellipse>
+            <g class="orbit-core-2">
+              <ellipse cx="32" cy="32" rx="23" ry="10.5" stroke="currentColor" stroke-width="1.7" opacity="0.3" transform="rotate(120 32 32)"></ellipse>
             </g>
           </svg>
-          <div class="brand-lockup">
+          <div class="brand-copy">
             <span class="brand-kicker">Nirmata / HumanOS</span>
-            <span class="brand-title">ATOM Thermodynamic Engine</span>
+            <span class="brand-title">ATOM Tokens / Watt / User Engine</span>
           </div>
         </div>
 
-        <nav class="nav-tabs" aria-label="Primary sections" id="mainNav"></nav>
+        <nav class="nav-tabs" id="mainNav" aria-label="Primary sections"></nav>
 
         <div class="topbar-actions">
-          <div class="status-chip" aria-label="Live simulator status">
-            <span class="status-dot" aria-hidden="true"></span>
+          <div class="pill-chip">
+            <span class="live-dot" aria-hidden="true"></span>
             Live Simulator
           </div>
-          <div class="atom-chip">Q Engine / June 2026</div>
+          <div class="pill-chip">Governed Runtime</div>
+          <button class="icon-btn assistant-toggle-mobile" id="assistantToggle" type="button" aria-label="Toggle ATOM Assistant">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3l7 4v10l-7 4-7-4V7l7-4z"></path>
+              <path d="M9.5 10.5h5"></path>
+              <path d="M9.5 13.5h3"></path>
+            </svg>
+          </button>
           <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7.5 7.5 0 0 0 21 12.79z"></path>
@@ -1471,429 +1717,546 @@
       </div>
     </header>
 
-    <aside class="deck-dock" id="deckDock" aria-label="Section navigation"></aside>
+    <div class="dock-dots" id="dockDots" aria-label="Section shortcuts"></div>
 
-    <main id="root">
-      <section id="sec-simulator" class="section">
-        <div class="section-inner">
-          <div class="hero-grid">
-            <div class="hero-copy">
-              <div class="eyebrow reveal">
-                <span class="status-dot" aria-hidden="true"></span>
-                Architected for ATOM
-              </div>
-              <h1 class="reveal">
-                <span class="accent">Tokens / Watt / User</span><br />
-                Thermodynamic + Quantum Engine
-              </h1>
-              <p class="hero-sub reveal">
-                An ATOM-branded, presentation-grade simulator for modeling inference efficiency through semantic caching,
-                routing intelligence, egress compression, and quantum leakage correction.
-              </p>
-              <div class="hero-actions reveal">
-                <button class="btn btn-primary" type="button" data-jump="sec-simulator">Run Simulator</button>
-                <button class="btn btn-secondary" type="button" data-jump="sec-competitive">See Competitive Matrix</button>
-              </div>
+    <div class="workspace">
+      <main class="main-stage" id="mainStage">
+        <section id="sec-simulator" class="section">
+          <div class="section-inner">
+            <div class="hero-grid">
+              <div class="hero-copy">
+                <div class="eyebrow reveal">
+                  <span class="live-dot" aria-hidden="true"></span>
+                  Architected for ATOM
+                </div>
+                <h1 class="reveal">
+                  <span class="accent">Tokens / Watt / User</span><br />
+                  Thermodynamic + Quantum Engine
+                </h1>
+                <p class="hero-sub reveal">
+                  A live simulator for AI efficiency modeling across semantic caching, routing intelligence, egress reduction,
+                  entropy contraction, and quantum leakage correction.
+                </p>
+                <div class="hero-actions reveal">
+                  <button class="btn btn-primary" type="button" data-jump="sec-simulator">Run Simulator</button>
+                  <button class="btn btn-secondary" type="button" data-jump="sec-competitive">Review Matrix</button>
+                </div>
 
-              <div class="metrics-row">
-                <div class="metric-card primary reveal">
-                  <div class="metric-label">Primary Metric</div>
-                  <div class="metric-value" id="heroMetricValue">600</div>
-                  <div class="metric-note">Baseline token productivity before convergence gains are applied.</div>
-                </div>
-                <div class="metric-card success reveal">
-                  <div class="metric-label">Efficiency Lift</div>
-                  <div class="metric-value" id="heroLiftValue">0%</div>
-                  <div class="metric-note">Compound impact from caching, routing, and egress reductions.</div>
-                </div>
-                <div class="metric-card gold reveal">
-                  <div class="metric-label">Annual Value</div>
-                  <div class="metric-value" id="heroCostValue">$0</div>
-                  <div class="metric-note">Avoided annual energy cost at the modeled hyperscale workload.</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="hero-visual">
-              <div class="panel stat-frame reveal">
-                <div class="frame-head">
-                  <div>
-                    <div class="frame-title">Live Output</div>
+                <div class="metrics-row">
+                  <div class="metric-card primary reveal">
+                    <div class="metric-label">Baseline Metric</div>
+                    <div class="metric-value" id="heroMetricValue">600</div>
+                    <div class="metric-note">Tokens per watt before convergence gains are applied.</div>
                   </div>
-                  <div class="mode-pill">Presentation Ready</div>
+                  <div class="metric-card success reveal">
+                    <div class="metric-label">Efficiency Lift</div>
+                    <div class="metric-value" id="heroLiftValue">0%</div>
+                    <div class="metric-note">Compound effect from cache, routing, and egress optimization.</div>
+                  </div>
+                  <div class="metric-card gold reveal">
+                    <div class="metric-label">Annual Value</div>
+                    <div class="metric-value" id="heroCostValue">$0</div>
+                    <div class="metric-note">Avoided annual energy cost at the current workload profile.</div>
+                  </div>
                 </div>
+              </div>
 
-                <div class="big-kpi">
+              <div class="hero-visual">
+                <div class="panel stat-frame reveal">
+                  <div class="frame-head">
+                    <div class="frame-title">Live Output</div>
+                    <div class="mode-pill">Presentation Ready</div>
+                  </div>
+
                   <div class="big-number">
-                    <div class="odometer" id="heroOdometer" aria-label="tokens per watt with convergence"></div>
+                    <div class="odometer hero-odo" id="heroOdometer" aria-label="tokens per watt with convergence"></div>
                     <div class="big-unit">tokens / Wh / user</div>
                   </div>
                   <div class="delta-pill" id="heroDeltaPill">+0% improvement vs baseline</div>
                 </div>
-              </div>
 
-              <div class="panel sparkline-panel reveal">
-                <div class="card-kicker">Efficiency curve</div>
-                <div class="sparkline-wrap">
-                  <svg class="sparkline-svg" viewBox="0 0 320 120" preserveAspectRatio="none" aria-hidden="true">
-                    <defs>
-                      <linearGradient id="sparkStroke" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#00d4e8" />
-                        <stop offset="100%" stop-color="#66f6ff" />
-                      </linearGradient>
-                      <linearGradient id="sparkFill" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="rgba(0,212,232,0.4)" />
-                        <stop offset="100%" stop-color="rgba(0,212,232,0)" />
-                      </linearGradient>
-                    </defs>
-                    <path d="M0 110 C40 105, 60 95, 90 82 S150 60, 180 58 S240 44, 320 18 L320 120 L0 120 Z" fill="url(#sparkFill)" opacity="0.7"></path>
-                    <path d="M0 110 C40 105, 60 95, 90 82 S150 60, 180 58 S240 44, 320 18" fill="none" stroke="url(#sparkStroke)" stroke-width="4" stroke-linecap="round"></path>
-                    <circle cx="320" cy="18" r="6" fill="#66f6ff"></circle>
-                  </svg>
-                </div>
-                <div class="spark-caption">
-                  <span>Baseline → converged architecture</span>
-                  <span>Entropy + quantum corrected</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="section-head" style="margin-top: var(--space-8);">
-            <div>
-              <h2 class="section-title reveal"><span class="accent">Interactive Simulator</span> / Control Surface</h2>
-              <p class="section-desc reveal">
-                Tune workload and convergence variables to see live changes in energy efficiency, annual cost avoidance,
-                entropy reduction, and per-query energy behavior.
-              </p>
-            </div>
-          </div>
-
-          <div class="grid-2">
-            <div class="control-card reveal">
-              <div class="card-kicker">Workload Inputs</div>
-              <h3 class="card-title">Baseline demand model</h3>
-              <p class="card-copy">Define the monthly workload profile and average energy burden per inference request.</p>
-              <div class="slider-stack">
-                <div class="slider-row">
-                  <div class="slider-info">
-                    <label class="slider-label" for="s-queries">Monthly Queries</label>
-                    <div class="slider-help">Modeled total query volume across the month, expressed in millions.</div>
-                    <input type="range" min="100" max="5000" step="50" value="1500" id="s-queries" />
+                <div class="panel sparkline-panel reveal">
+                  <div class="card-kicker">Efficiency Curve</div>
+                  <div class="sparkline-wrap">
+                    <svg class="sparkline-svg" viewBox="0 0 320 120" preserveAspectRatio="none" aria-hidden="true">
+                      <defs>
+                        <linearGradient id="sparkStroke" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stop-color="#00d4e8"></stop>
+                          <stop offset="100%" stop-color="#66f6ff"></stop>
+                        </linearGradient>
+                        <linearGradient id="sparkFill" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" stop-color="rgba(0,212,232,0.4)"></stop>
+                          <stop offset="100%" stop-color="rgba(0,212,232,0)"></stop>
+                        </linearGradient>
+                      </defs>
+                      <path d="M0 110 C40 104, 60 95, 92 80 S150 60, 180 58 S240 44, 320 18 L320 120 L0 120 Z" fill="url(#sparkFill)" opacity="0.7"></path>
+                      <path d="M0 110 C40 104, 60 95, 92 80 S150 60, 180 58 S240 44, 320 18" fill="none" stroke="url(#sparkStroke)" stroke-width="4" stroke-linecap="round"></path>
+                      <circle cx="320" cy="18" r="6" fill="#66f6ff"></circle>
+                    </svg>
                   </div>
-                  <div class="slider-value" id="v-queries">1500M</div>
-                </div>
-
-                <div class="slider-row">
-                  <div class="slider-info">
-                    <label class="slider-label" for="s-tokens">Average Tokens / Query</label>
-                    <div class="slider-help">Average token output per user interaction across the modeled workload.</div>
-                    <input type="range" min="200" max="1200" step="50" value="600" id="s-tokens" />
+                  <div class="spark-caption">
+                    <span>Baseline → converged architecture</span>
+                    <span>Entropy + quantum corrected</span>
                   </div>
-                  <div class="slider-value" id="v-tokens">600</div>
-                </div>
-
-                <div class="slider-row">
-                  <div class="slider-info">
-                    <label class="slider-label" for="s-wh">Energy / Query</label>
-                    <div class="slider-help">Baseline watt-hour cost required to serve one query before convergence savings.</div>
-                    <input type="range" min="0.3" max="3.0" step="0.1" value="1.0" id="s-wh" />
-                  </div>
-                  <div class="slider-value" id="v-wh">1.0 Wh</div>
                 </div>
               </div>
             </div>
 
-            <div class="control-card reveal">
-              <div class="card-kicker">Convergence Layer</div>
-              <h3 class="card-title">Efficiency levers</h3>
-              <p class="card-copy">Shape the modeled reduction in wasted compute, transit overhead, and chip leakage losses.</p>
-              <div class="slider-stack">
-                <div class="slider-row">
-                  <div class="slider-info">
-                    <label class="slider-label" for="s-cache">Semantic Cache Hit Rate</label>
-                    <div class="slider-help">Cache hits eliminate repeated GPU cycles and directly remove energy use.</div>
-                    <input type="range" min="0" max="40" step="1" value="18" id="s-cache" />
-                  </div>
-                  <div class="slider-value" id="v-cache">18%</div>
-                </div>
-
-                <div class="slider-row">
-                  <div class="slider-info">
-                    <label class="slider-label" for="s-routing">Routing Efficiency Gain</label>
-                    <div class="slider-help">Smarter placement reduces wasted compute on the non-cached remainder.</div>
-                    <input type="range" min="0" max="25" step="1" value="10" id="s-routing" />
-                  </div>
-                  <div class="slider-value" id="v-routing">10%</div>
-                </div>
-
-                <div class="slider-row">
-                  <div class="slider-info">
-                    <label class="slider-label" for="s-egress">Egress Elimination</label>
-                    <div class="slider-help">Cross-cloud movement reduction lowers transit thermal cost on remaining traffic.</div>
-                    <input type="range" min="0" max="15" step="1" value="5" id="s-egress" />
-                  </div>
-                  <div class="slider-value" id="v-egress">5%</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="result-board reveal">
-            <div class="result-top">
+            <div class="section-head" style="margin-top: var(--space-8);">
               <div>
-                <div class="result-kicker">Modeled Output / Convergence Active</div>
-                <div class="result-value">
-                  <div class="odometer" id="resultOdometer" aria-label="tokens per watt per user"></div>
-                  <div class="result-subunit">tokens / Wh / user</div>
+                <h2 class="section-title reveal"><span class="accent">Interactive Simulator</span> / Control Surface</h2>
+                <p class="section-desc reveal">
+                  Adjust workload and convergence variables to see live changes in efficiency, annual cost avoidance,
+                  entropy reduction, and per-query energy behavior.
+                </p>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="control-card reveal">
+                <div class="card-kicker">Workload Inputs</div>
+                <h3 class="card-title">Baseline demand model</h3>
+                <p class="card-copy">Define monthly query load, average token size, and baseline energy cost.</p>
+
+                <div class="slider-stack">
+                  <div class="slider-row">
+                    <div class="slider-info">
+                      <label class="slider-label" for="s-queries">Monthly Queries</label>
+                      <div class="slider-help">Total modeled query volume across the month in millions.</div>
+                      <input type="range" min="100" max="5000" step="50" value="1500" id="s-queries" />
+                    </div>
+                    <div class="slider-value" id="v-queries">1500M</div>
+                  </div>
+
+                  <div class="slider-row">
+                    <div class="slider-info">
+                      <label class="slider-label" for="s-tokens">Average Tokens / Query</label>
+                      <div class="slider-help">Average token output per user interaction.</div>
+                      <input type="range" min="200" max="1200" step="50" value="600" id="s-tokens" />
+                    </div>
+                    <div class="slider-value" id="v-tokens">600</div>
+                  </div>
+
+                  <div class="slider-row">
+                    <div class="slider-info">
+                      <label class="slider-label" for="s-wh">Energy / Query</label>
+                      <div class="slider-help">Baseline watt-hour cost before optimization layers.</div>
+                      <input type="range" min="0.3" max="3.0" step="0.1" value="1.0" id="s-wh" />
+                    </div>
+                    <div class="slider-value" id="v-wh">1.0 Wh</div>
+                  </div>
                 </div>
               </div>
-              <div class="delta-pill" id="resultDeltaPill">+0% improvement vs baseline</div>
-            </div>
 
-            <div class="result-grid">
-              <div class="mini-stat primary">
-                <div class="k">Total Efficiency Gain</div>
-                <div class="v" id="miniEfficiency">0%</div>
-                <div class="s">Blended thermodynamic + routing compound effect.</div>
+              <div class="control-card reveal">
+                <div class="card-kicker">Convergence Layer</div>
+                <h3 class="card-title">Efficiency levers</h3>
+                <p class="card-copy">Shape the modeled reduction in wasted compute, transit overhead, and chip leakage.</p>
+
+                <div class="slider-stack">
+                  <div class="slider-row">
+                    <div class="slider-info">
+                      <label class="slider-label" for="s-cache">Semantic Cache Hit Rate</label>
+                      <div class="slider-help">Cache hits eliminate repeated GPU cycles directly.</div>
+                      <input type="range" min="0" max="40" step="1" value="18" id="s-cache" />
+                    </div>
+                    <div class="slider-value" id="v-cache">18%</div>
+                  </div>
+
+                  <div class="slider-row">
+                    <div class="slider-info">
+                      <label class="slider-label" for="s-routing">Routing Efficiency Gain</label>
+                      <div class="slider-help">Smarter placement lowers waste on non-cached traffic.</div>
+                      <input type="range" min="0" max="25" step="1" value="10" id="s-routing" />
+                    </div>
+                    <div class="slider-value" id="v-routing">10%</div>
+                  </div>
+
+                  <div class="slider-row">
+                    <div class="slider-info">
+                      <label class="slider-label" for="s-egress">Egress Elimination</label>
+                      <div class="slider-help">Cross-cloud transit reduction lowers remaining thermal cost.</div>
+                      <input type="range" min="0" max="15" step="1" value="5" id="s-egress" />
+                    </div>
+                    <div class="slider-value" id="v-egress">5%</div>
+                  </div>
+                </div>
               </div>
-              <div class="mini-stat gold">
-                <div class="k">Avoided Annual Cost</div>
-                <div class="v" id="miniCost">$0</div>
-                <div class="s">Assuming $0.09 per kWh blended hyperscale rate.</div>
+            </div>
+
+            <div class="result-board reveal">
+              <div class="result-top">
+                <div>
+                  <div class="result-kicker">Modeled Output / Convergence Active</div>
+                  <div class="result-value">
+                    <div class="odometer result-odo" id="resultOdometer" aria-label="tokens per watt per user"></div>
+                    <div class="result-subunit">tokens / Wh / user</div>
+                  </div>
+                </div>
+                <div class="delta-pill" id="resultDeltaPill">+0% improvement vs baseline</div>
               </div>
-              <div class="mini-stat success">
-                <div class="k">Entropy Reduction Factor</div>
-                <div class="v" id="miniEntropy">0</div>
-                <div class="s">Boltzmann-based reduction in coordination microstates.</div>
+
+              <div class="result-grid">
+                <div class="mini-stat primary">
+                  <div class="k">Total Efficiency Gain</div>
+                  <div class="v" id="miniEfficiency">0%</div>
+                  <div class="s">Blended thermodynamic + routing effect.</div>
+                </div>
+                <div class="mini-stat gold">
+                  <div class="k">Avoided Annual Cost</div>
+                  <div class="v" id="miniCost">$0</div>
+                  <div class="s">At $0.09 per kWh blended hyperscale rate.</div>
+                </div>
+                <div class="mini-stat success">
+                  <div class="k">Entropy Reduction Factor</div>
+                  <div class="v" id="miniEntropy">0</div>
+                  <div class="s">Boltzmann reduction in coordination microstates.</div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="trace-card reveal">
-            <div class="card-kicker">Algorithm Trace</div>
-            <div id="traceOutput"></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="sec-equations" class="section">
-        <div class="section-inner">
-          <div class="section-head">
-            <div>
-              <h2 class="section-title reveal"><span class="accent">Governing Equations</span> / Physics Layer</h2>
-              <p class="section-desc reveal">
-                The model expresses AI efficiency as a physics problem: entropy management, energy conservation, tunneling
-                loss, and useful work extracted per watt-hour.
-              </p>
+            <div class="trace-card reveal">
+              <div class="card-kicker">Algorithm Trace</div>
+              <div id="traceOutput"></div>
             </div>
           </div>
+        </section>
 
-          <div class="equation-stack">
-            <div class="equation-box reveal">
-              <div class="equation-label">Second Law / Entropy Reduction</div>
-              <div class="equation-line">ΔS = k<sub>B</sub> ln(W) <span class="equation-comment">// Boltzmann entropy, W = number of microstates</span></div>
-              <div class="equation-line">Without convergence: W<sub>0</sub> = 15 <span class="equation-comment">// 3 clouds × 5 failure modes</span></div>
-              <div class="equation-line">With convergence: W<sub>1</sub> = 3 <span class="equation-comment">// unified control plane</span></div>
-              <div class="equation-line">Entropy reduction = k<sub>B</sub> ln(15 / 3) = <span id="eqEntropy">k<sub>B</sub> × 1.465</span></div>
+        <section id="sec-equations" class="section">
+          <div class="section-inner">
+            <div class="section-head">
+              <div>
+                <h2 class="section-title reveal"><span class="accent">Governing Equations</span> / Physics Layer</h2>
+                <p class="section-desc reveal">
+                  The model expresses AI efficiency as a physics problem: entropy management, energy conservation,
+                  tunneling loss, and useful work extracted per watt-hour.
+                </p>
+              </div>
             </div>
 
-            <div class="equation-box reveal">
-              <div class="equation-label">First Law / Query Energy</div>
-              <div class="equation-line">E<sub>query</sub> = N<sub>FLOPs</sub> × E<sub>FLOP</sub> <span class="equation-comment">// total compute energy per request</span></div>
-              <div class="equation-line">Semantic caching forces N<sub>FLOPs</sub> → 0 for cache hits.</div>
-              <div class="equation-line">Energy saved = cache hit rate × E<sub>query</sub>.</div>
+            <div class="equation-stack">
+              <div class="equation-box reveal">
+                <div class="equation-label">Second Law / Entropy Reduction</div>
+                <div class="equation-line">ΔS = k<sub>B</sub> ln(W) <span class="equation-comment">// Boltzmann entropy, W = microstates</span></div>
+                <div class="equation-line">Without convergence: W<sub>0</sub> = 15 <span class="equation-comment">// 3 clouds × 5 failure modes</span></div>
+                <div class="equation-line">With convergence: W<sub>1</sub> = 3 <span class="equation-comment">// unified control plane</span></div>
+                <div class="equation-line">Entropy reduction = <span id="eqEntropy">k<sub>B</sub> × 1.465</span></div>
+              </div>
+
+              <div class="equation-box reveal">
+                <div class="equation-label">First Law / Query Energy</div>
+                <div class="equation-line">E<sub>query</sub> = N<sub>FLOPs</sub> × E<sub>FLOP</sub> <span class="equation-comment">// total compute energy per request</span></div>
+                <div class="equation-line">Semantic caching forces N<sub>FLOPs</sub> → 0 for cache hits.</div>
+                <div class="equation-line">Energy saved = cache hit rate × E<sub>query</sub>.</div>
+              </div>
+
+              <div class="equation-box reveal">
+                <div class="equation-label">Quantum Tunneling / 4nm Leakage</div>
+                <div class="equation-line">ΔE · Δt ≥ ħ / 2 <span class="equation-comment">// uncertainty floor</span></div>
+                <div class="equation-line">T ≈ exp(-2αd) <span class="equation-comment">// simplified WKB approximation</span></div>
+                <div class="equation-line">Leakage factor = 15% of switching energy at 4nm.</div>
+                <div class="equation-line">Distributed inference recovers 8% of that leakage.</div>
+              </div>
+
+              <div class="equation-box reveal">
+                <div class="equation-label">Final Efficiency Metric</div>
+                <div class="equation-line">η = N<sub>tokens</sub> / E<sub>Wh</sub> <span class="equation-comment">// useful token output per watt-hour</span></div>
+                <div class="equation-line">Baseline η<sub>0</sub> = <span id="eqBaseline">600</span> tokens / Wh</div>
+                <div class="equation-line">Converged η<sub>1</sub> = <span id="eqConverged">759</span> tokens / Wh</div>
+                <div class="equation-line">Improvement Δη = <span id="eqImprovement">+26.5%</span></div>
+              </div>
             </div>
 
-            <div class="equation-box reveal">
-              <div class="equation-label">Quantum Tunneling / 4nm Leakage</div>
-              <div class="equation-line">ΔE · Δt ≥ ħ / 2 <span class="equation-comment">// uncertainty floor</span></div>
-              <div class="equation-line">T ≈ exp(-2αd) <span class="equation-comment">// simplified WKB tunneling approximation</span></div>
-              <div class="equation-line">Leakage factor = 15% of switching energy at 4nm.</div>
-              <div class="equation-line">Distributed inference recovers 8% of that leakage through lower per-chip utilization.</div>
-            </div>
-
-            <div class="equation-box reveal">
-              <div class="equation-label">Final Efficiency Metric</div>
-              <div class="equation-line">η = N<sub>tokens</sub> / E<sub>Wh</sub> <span class="equation-comment">// useful token output per watt-hour</span></div>
-              <div class="equation-line">Baseline η<sub>0</sub> = <span id="eqBaseline">600</span> tokens / Wh</div>
-              <div class="equation-line">Converged η<sub>1</sub> = <span id="eqConverged">759</span> tokens / Wh</div>
-              <div class="equation-line">Improvement Δη = <span id="eqImprovement">+26.5%</span></div>
+            <div class="info-callout reveal">
+              <strong>ATOM reading:</strong> tokens / watt / user is the operational efficiency expression of the entire inference system.
+              The convergence layer does not create energy. It removes waste already being paid for.
             </div>
           </div>
+        </section>
 
-          <div class="info-callout reveal">
-            <strong>ATOM reading:</strong> tokens / watt / user is the operational efficiency expression of the entire inference system.
-            The convergence layer does not create energy. It eliminates waste already being paid for.
-          </div>
-        </div>
-      </section>
+        <section id="sec-competitive" class="section">
+          <div class="section-inner">
+            <div class="section-head">
+              <div>
+                <h2 class="section-title reveal"><span class="accent">Competitive Matrix</span> / Honest Fit Assessment</h2>
+                <p class="section-desc reveal">
+                  The market view is framed as an architecture-fit matrix, not a hype slide.
+                </p>
+              </div>
+            </div>
 
-      <section id="sec-competitive" class="section">
-        <div class="section-inner">
-          <div class="section-head">
-            <div>
-              <h2 class="section-title reveal"><span class="accent">Competitive Matrix</span> / Honest Fit Assessment</h2>
-              <p class="section-desc reveal">
-                This layout reframes the market view as a neutral architecture-fit matrix rather than a hype slide.
-              </p>
+            <div class="table-wrap reveal">
+              <table class="matrix-table">
+                <thead>
+                  <tr>
+                    <th>Provider</th>
+                    <th style="text-align:center;">Edge POPs</th>
+                    <th style="text-align:center;">GPU at Edge</th>
+                    <th style="text-align:center;">Semantic Cache</th>
+                    <th style="text-align:center;">Neutral Broker</th>
+                    <th style="text-align:center;">Security Perimeter</th>
+                    <th style="text-align:center;">Enterprise SLA</th>
+                    <th>Best For</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="winner">
+                    <td><strong style="color: var(--color-text);">Akamai AI Grid</strong><span class="pill best">Recommended</span></td>
+                    <td style="text-align:center;"><span class="tick">✓</span> 4,400</td>
+                    <td style="text-align:center;"><span class="tick">✓</span> Blackwell</td>
+                    <td style="text-align:center;"><span class="partial">◐</span> Roadmap</td>
+                    <td style="text-align:center;"><span class="tick">✓</span></td>
+                    <td style="text-align:center;"><span class="tick">✓</span> WAAP / Prolexic</td>
+                    <td style="text-align:center;"><span class="tick">✓</span></td>
+                    <td>Global-scale distributed inference plus neutral multi-cloud orchestration.</td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color: var(--color-text);">Cloudflare AI Gateway</strong><span class="pill good">Strong</span></td>
+                    <td style="text-align:center;">300</td>
+                    <td style="text-align:center;"><span class="cross">✗</span></td>
+                    <td style="text-align:center;"><span class="partial">◐</span> Exact-match only</td>
+                    <td style="text-align:center;"><span class="tick">✓</span></td>
+                    <td style="text-align:center;"><span class="tick">✓</span></td>
+                    <td style="text-align:center;"><span class="partial">◐</span> Partial</td>
+                    <td>Front-door routing and caching for modern AI delivery stacks.</td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color: var(--color-text);">Fastly AI</strong><span class="pill good">Strong</span></td>
+                    <td style="text-align:center;">~70</td>
+                    <td style="text-align:center;"><span class="cross">✗</span></td>
+                    <td style="text-align:center;"><span class="tick">✓</span> Production</td>
+                    <td style="text-align:center;"><span class="tick">✓</span></td>
+                    <td style="text-align:center;"><span class="partial">◐</span> Partial</td>
+                    <td style="text-align:center;"><span class="cross">✗</span></td>
+                    <td>Excellent semantic caching, weaker on footprint and hardware distribution.</td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color: var(--color-text);">AWS Native</strong><span class="pill weak">Conflicted</span></td>
+                    <td style="text-align:center;">400</td>
+                    <td style="text-align:center;"><span class="cross">✗</span> CloudFront only</td>
+                    <td style="text-align:center;"><span class="cross">✗</span></td>
+                    <td style="text-align:center;"><span class="cross">✗</span> Conflicted</td>
+                    <td style="text-align:center;"><span class="partial">◐</span> Partial</td>
+                    <td style="text-align:center;"><span class="tick">✓</span></td>
+                    <td>Strong if you stay native, weaker for neutral brokerage across rivals.</td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color: var(--color-text);">Kong AI Gateway</strong><span class="pill good">Strong</span></td>
+                    <td style="text-align:center;">Software only</td>
+                    <td style="text-align:center;"><span class="cross">✗</span></td>
+                    <td style="text-align:center;"><span class="tick">✓</span> Semantic + MCP</td>
+                    <td style="text-align:center;"><span class="tick">✓</span></td>
+                    <td style="text-align:center;"><span class="cross">✗</span> Uses partner infra</td>
+                    <td style="text-align:center;"><span class="tick">✓</span></td>
+                    <td>Application-layer routing and policy on top of infrastructure partners.</td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color: var(--color-text);">Bifrost / LiteLLM / OpenRouter</strong><span class="pill partial">Different Layer</span></td>
+                    <td style="text-align:center;">Software only</td>
+                    <td style="text-align:center;"><span class="cross">✗</span></td>
+                    <td style="text-align:center;"><span class="tick">✓</span> App-layer cache</td>
+                    <td style="text-align:center;"><span class="tick">✓</span></td>
+                    <td style="text-align:center;"><span class="cross">✗</span></td>
+                    <td style="text-align:center;"><span class="cross">✗</span></td>
+                    <td>Useful request routing, not the infrastructure convergence fabric itself.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="warning-callout reveal">
+              <strong>Honest caveat:</strong> Akamai is strongest as a full-system fit, not because it wins every isolated subcategory today.
+            </div>
+
+            <div class="info-callout reveal">
+              <strong>Combined architecture view:</strong> Kong plus Akamai is stronger than either layer alone:
+              Kong governs routing and policy, while Akamai carries edge distribution, security perimeter, and neutral brokerage.
             </div>
           </div>
+        </section>
 
-          <div class="table-wrap reveal">
-            <table class="matrix-table">
-              <thead>
-                <tr>
-                  <th>Provider</th>
-                  <th style="text-align:center;">Edge POPs</th>
-                  <th style="text-align:center;">GPU at Edge</th>
-                  <th style="text-align:center;">Semantic Cache</th>
-                  <th style="text-align:center;">Neutral Broker</th>
-                  <th style="text-align:center;">Security Perimeter</th>
-                  <th style="text-align:center;">Enterprise SLA</th>
-                  <th>Best For</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="winner">
-                  <td><strong style="color: var(--color-text);">Akamai AI Grid</strong><span class="pill best">Recommended</span></td>
-                  <td style="text-align:center;"><span class="tick">✓</span> 4,400</td>
-                  <td style="text-align:center;"><span class="tick">✓</span> Blackwell</td>
-                  <td style="text-align:center;"><span class="partial">◐</span> Roadmap</td>
-                  <td style="text-align:center;"><span class="tick">✓</span></td>
-                  <td style="text-align:center;"><span class="tick">✓</span> WAAP / Prolexic</td>
-                  <td style="text-align:center;"><span class="tick">✓</span></td>
-                  <td>Global-scale distributed inference plus neutral multi-cloud orchestration.</td>
-                </tr>
-                <tr>
-                  <td><strong style="color: var(--color-text);">Cloudflare AI Gateway</strong><span class="pill good">Strong</span></td>
-                  <td style="text-align:center;">300</td>
-                  <td style="text-align:center;"><span class="cross">✗</span></td>
-                  <td style="text-align:center;"><span class="partial">◐</span> Exact-match only</td>
-                  <td style="text-align:center;"><span class="tick">✓</span></td>
-                  <td style="text-align:center;"><span class="tick">✓</span></td>
-                  <td style="text-align:center;"><span class="partial">◐</span> Partial</td>
-                  <td>Front-door routing and caching, already familiar in modern AI delivery stacks.</td>
-                </tr>
-                <tr>
-                  <td><strong style="color: var(--color-text);">Fastly AI</strong><span class="pill good">Strong</span></td>
-                  <td style="text-align:center;">~70</td>
-                  <td style="text-align:center;"><span class="cross">✗</span></td>
-                  <td style="text-align:center;"><span class="tick">✓</span> Production</td>
-                  <td style="text-align:center;"><span class="tick">✓</span></td>
-                  <td style="text-align:center;"><span class="partial">◐</span> Partial</td>
-                  <td style="text-align:center;"><span class="cross">✗</span></td>
-                  <td>Excellent semantic caching today, weaker on global footprint and hardware distribution.</td>
-                </tr>
-                <tr>
-                  <td><strong style="color: var(--color-text);">AWS Native</strong><span class="pill weak">Conflicted</span></td>
-                  <td style="text-align:center;">400</td>
-                  <td style="text-align:center;"><span class="cross">✗</span> CloudFront only</td>
-                  <td style="text-align:center;"><span class="cross">✗</span></td>
-                  <td style="text-align:center;"><span class="cross">✗</span> Conflicted</td>
-                  <td style="text-align:center;"><span class="partial">◐</span> Partial</td>
-                  <td style="text-align:center;"><span class="tick">✓</span></td>
-                  <td>Strong if you stay native, weaker for neutral brokerage across competing factories.</td>
-                </tr>
-                <tr>
-                  <td><strong style="color: var(--color-text);">Kong AI Gateway</strong><span class="pill good">Strong</span></td>
-                  <td style="text-align:center;">Software only</td>
-                  <td style="text-align:center;"><span class="cross">✗</span></td>
-                  <td style="text-align:center;"><span class="tick">✓</span> Semantic + MCP</td>
-                  <td style="text-align:center;"><span class="tick">✓</span></td>
-                  <td style="text-align:center;"><span class="cross">✗</span> Uses Akamai</td>
-                  <td style="text-align:center;"><span class="tick">✓</span></td>
-                  <td>Application-layer governance sitting effectively on top of infrastructure partners.</td>
-                </tr>
-                <tr>
-                  <td><strong style="color: var(--color-text);">Bifrost / LiteLLM / OpenRouter</strong><span class="pill partial">Different Layer</span></td>
-                  <td style="text-align:center;">Software only</td>
-                  <td style="text-align:center;"><span class="cross">✗</span></td>
-                  <td style="text-align:center;"><span class="tick">✓</span> App-layer cache</td>
-                  <td style="text-align:center;"><span class="tick">✓</span></td>
-                  <td style="text-align:center;"><span class="cross">✗</span></td>
-                  <td style="text-align:center;"><span class="cross">✗</span></td>
-                  <td>Useful for request routing, not sufficient as the infrastructure convergence fabric.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="warning-callout reveal">
-            <strong>Honest caveat:</strong> Akamai is strongest as a full-system fit, not because it leads every individual subcategory today.
-            Fastly is more mature on semantic cache execution right now, while Akamai is stronger on the whole infrastructure envelope.
-          </div>
-
-          <div class="info-callout reveal">
-            <strong>Combined architecture view:</strong> Kong plus Akamai produces a stronger system than either layer alone:
-            Kong governs application routing and policy, while Akamai carries edge distribution, security perimeter, and neutral brokerage.
-          </div>
-        </div>
-      </section>
-
-      <section id="sec-rationale" class="section">
-        <div class="section-inner">
-          <div class="section-head">
-            <div>
-              <h2 class="section-title reveal"><span class="accent">Why Akamai Wins</span> / Structural Logic</h2>
-              <p class="section-desc reveal">
-                The case is not “perfect vendor.” It is “best structural match for the convergence layer problem.”
-              </p>
+        <section id="sec-rationale" class="section">
+          <div class="section-inner">
+            <div class="section-head">
+              <div>
+                <h2 class="section-title reveal"><span class="accent">Why Akamai Wins</span> / Structural Logic</h2>
+                <p class="section-desc reveal">
+                  The case is not “perfect vendor.” It is “best structural match for the convergence layer problem.”
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div class="thesis-grid">
-            <div class="thesis-card reveal">
-              <div class="thesis-number">01</div>
-              <div class="card-kicker">Neutral Broker</div>
-              <h3 class="card-title">Commercially aligned across rival clouds</h3>
+            <div class="thesis-grid">
+              <div class="thesis-card reveal">
+                <div class="thesis-number">01</div>
+                <div class="card-kicker">Neutral Broker</div>
+                <h3 class="card-title">Commercially aligned across rival clouds</h3>
+                <p class="card-copy">
+                  Akamai can coordinate across AWS, Azure / Foundry, and CoreWeave without owning the inference product being brokered.
+                </p>
+              </div>
+
+              <div class="thesis-card reveal">
+                <div class="thesis-number">02</div>
+                <div class="card-kicker">GPU Distribution</div>
+                <h3 class="card-title">Edge-scale hardware, not just request routing</h3>
+                <p class="card-copy">
+                  Pure-software gateways can route demand, but cannot execute distributed inference without distributed hardware.
+                </p>
+              </div>
+            </div>
+
+            <div class="thesis-card reveal" style="margin-bottom: var(--space-5);">
+              <div class="thesis-number">03</div>
+              <div class="card-kicker">Security + SLA</div>
+              <h3 class="card-title">Full-stack perimeter ownership matters at scale</h3>
               <p class="card-copy">
-                Akamai can coordinate across AWS, Azure / Foundry, and CoreWeave without owning the inference product being brokered.
+                WAAP, DDoS mitigation, and enterprise-grade ownership across the convergence layer make operational continuity part of the platform thesis.
               </p>
             </div>
 
-            <div class="thesis-card reveal">
-              <div class="thesis-number">02</div>
-              <div class="card-kicker">GPU Distribution</div>
-              <h3 class="card-title">Edge-scale hardware, not just request routing</h3>
-              <p class="card-copy">
-                Pure-software gateways can route demand, but they cannot execute distributed inference without distributed hardware.
+            <div class="closing-thesis reveal">
+              <div class="card-kicker">One-line thesis</div>
+              <h3 class="card-title" style="margin-bottom: var(--space-3);">Best total-system fit beats isolated feature leadership.</h3>
+              <p>
+                Akamai is not the only solution and not the winner on every row. It is the strongest answer when the requirement is simultaneous:
+                neutral brokerage, edge-scale GPU distribution, and full-stack security ownership.
               </p>
+
+              <div class="footer-tag">
+                <svg class="brand-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true" style="width:20px;height:20px;">
+                  <circle cx="32" cy="32" r="4.8" fill="currentColor"></circle>
+                  <ellipse cx="32" cy="32" rx="23" ry="10.5" stroke="currentColor" stroke-width="1.7" opacity="0.95"></ellipse>
+                  <ellipse cx="32" cy="32" rx="23" ry="10.5" stroke="currentColor" stroke-width="1.7" opacity="0.45" transform="rotate(60 32 32)"></ellipse>
+                  <ellipse cx="32" cy="32" rx="23" ry="10.5" stroke="currentColor" stroke-width="1.7" opacity="0.3" transform="rotate(120 32 32)"></ellipse>
+                </svg>
+                ATOM-ready / governed / slideable
+              </div>
             </div>
           </div>
+        </section>
+      </main>
 
-          <div class="thesis-card reveal" style="margin-bottom: var(--space-5);">
-            <div class="thesis-number">03</div>
-            <div class="card-kicker">Security + SLA</div>
-            <h3 class="card-title">Full-stack perimeter ownership matters at scale</h3>
-            <p class="card-copy">
-              WAAP, DDoS mitigation, and enterprise-grade ownership across the convergence layer turn operational continuity into part of the core product thesis.
-            </p>
+      <aside class="assistant-panel" id="assistantPanel" aria-label="ATOM Assistant">
+        <div class="assistant-card assistant-header">
+          <div class="assistant-top">
+            <div>
+              <div class="assistant-label">Governed Intelligence Layer</div>
+              <h2 class="assistant-title">ATOM Assistant</h2>
+            </div>
+            <div class="confidence-pill high" id="confidencePill">High confidence</div>
           </div>
 
-          <div class="closing-thesis reveal">
-            <div class="card-kicker">One-line thesis</div>
-            <h3 class="card-title" style="margin-bottom: var(--space-3);">Best total-system fit beats isolated feature leadership.</h3>
-            <p>
-              Akamai is not the only solution and not the winner on every individual row. It is the strongest answer when the requirement is simultaneous:
-              neutral brokerage, edge-scale GPU distribution, and full-stack security ownership.
-            </p>
+          <p class="assistant-sub">
+            App-aware operating layer for this engine. Context, evidence, actions, approvals, and audit state are all surfaced inline.
+          </p>
 
-            <div class="footer-tag">
-              <svg class="brand-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true" style="width:20px;height:20px;">
-                <circle cx="32" cy="32" r="4.8" fill="currentColor"></circle>
-                <ellipse cx="32" cy="32" rx="23" ry="10.5" stroke="currentColor" stroke-width="1.7" opacity="0.95"></ellipse>
-                <ellipse cx="32" cy="32" rx="23" ry="10.5" stroke="currentColor" stroke-width="1.7" opacity="0.45" transform="rotate(60 32 32)"></ellipse>
-                <ellipse cx="32" cy="32" rx="23" ry="10.5" stroke="currentColor" stroke-width="1.7" opacity="0.3" transform="rotate(120 32 32)"></ellipse>
-              </svg>
-              ATOM-ready / slideable / investor-demo polished
+          <div class="assistant-mode-row" id="modeRow">
+            <button class="mode-btn active" data-mode="guide" type="button">Guide</button>
+            <button class="mode-btn" data-mode="explain" type="button">Explain</button>
+            <button class="mode-btn" data-mode="copilot" type="button">Copilot</button>
+            <button class="mode-btn" data-mode="agent" type="button">Agent</button>
+            <button class="mode-btn" data-mode="watchtower" type="button">Watchtower</button>
+          </div>
+        </div>
+
+        <div class="assistant-card">
+          <div class="assistant-label" style="margin-bottom: 12px;">Runtime Context</div>
+          <div class="assistant-grid">
+            <div class="assistant-mini">
+              <div class="small-kicker">Route</div>
+              <div class="v" id="ctxRoute">/tokens-watt-user/simulator</div>
+            </div>
+            <div class="assistant-mini">
+              <div class="small-kicker">Role</div>
+              <div class="v" id="ctxRole">Chief Quantum Officer</div>
+            </div>
+            <div class="assistant-mini">
+              <div class="small-kicker">Selected Entity</div>
+              <div class="v" id="ctxEntity">Modeling Scenario</div>
+            </div>
+            <div class="assistant-mini">
+              <div class="small-kicker">Permission Scope</div>
+              <div class="v" id="ctxPerms">Read + draft + approval-gated actions</div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
 
-    <div class="presentation-banner" id="presentationBanner">
+        <div class="assistant-card">
+          <div class="assistant-label" style="margin-bottom: 12px;">App Profile</div>
+          <ul class="profile-list">
+            <li class="profile-row"><strong>App:</strong> ATOM Tokens / Watt / User Engine</li>
+            <li class="profile-row"><strong>Purpose:</strong> Model inference efficiency, provider fit, and operating leverage.</li>
+            <li class="profile-row"><strong>Core entities:</strong> scenarios, workloads, providers, efficiency levers, approval actions.</li>
+            <li class="profile-row"><strong>Allowed writes:</strong> draft scenarios, save notes, queue board summaries, prepare action plans.</li>
+          </ul>
+        </div>
+
+        <div class="assistant-scroll">
+          <div class="assistant-card assistant-response">
+            <div class="response-block">
+              <div class="response-title">1 / Direct answer</div>
+              <div class="response-main" id="assistantAnswer">ATOM is ready.</div>
+            </div>
+
+            <div class="response-block">
+              <div class="response-title">2 / Evidence summary</div>
+              <ul class="evidence-list" id="assistantEvidence"></ul>
+            </div>
+
+            <div class="response-block">
+              <div class="response-title">3 / Proposed next action</div>
+              <div class="assistant-body-copy" id="assistantNextAction"></div>
+            </div>
+
+            <div class="response-block">
+              <div class="response-title">4 / Execution state</div>
+              <div class="execution-state" id="assistantExecutionState"></div>
+            </div>
+          </div>
+
+          <div class="assistant-card">
+            <div class="assistant-label" style="margin-bottom: 12px;">Suggested prompts</div>
+            <div class="suggested-actions">
+              <button class="suggest-btn" type="button" data-prompt="Summarize the current scenario risk.">Summarize scenario risk</button>
+              <button class="suggest-btn" type="button" data-prompt="Recommend the next best optimization move.">Recommend next move</button>
+              <button class="suggest-btn" type="button" data-prompt="Draft a board-ready explanation of the current efficiency gain.">Draft board summary</button>
+              <button class="suggest-btn" type="button" data-prompt="Prepare a provider comparison memo from the competitive matrix.">Prepare provider memo</button>
+            </div>
+          </div>
+
+          <div class="assistant-card">
+            <div class="assistant-label" style="margin-bottom: 12px;">Proposed actions</div>
+            <ul class="action-list" id="actionList"></ul>
+          </div>
+
+          <div class="assistant-card">
+            <div class="assistant-label" style="margin-bottom: 12px;">Audit log</div>
+            <ul class="audit-list" id="auditList"></ul>
+            <div class="audit-note" style="margin-top: 10px;">Writes are approval-gated. High-risk actions require explicit confirmation.</div>
+          </div>
+        </div>
+
+        <div class="assistant-card assistant-input-wrap">
+          <div class="assistant-label">Ask ATOM</div>
+          <form class="assistant-input-row" id="assistantForm">
+            <input
+              id="assistantInput"
+              class="assistant-input"
+              type="text"
+              placeholder="Ask about this scenario, section, or action..."
+              autocomplete="off"
+            />
+            <button class="tiny-btn primary" type="submit">Run</button>
+          </form>
+          <div class="assistant-body-copy">
+            Quick keys: <span class="kbd">P</span> presentation, <span class="kbd">↑</span>/<span class="kbd">↓</span> navigate, <span class="kbd">Esc</span> exit.
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="banner">
       <strong>Deck mode</strong>
       <span><span class="kbd">P</span> toggle</span>
       <span><span class="kbd">↑</span>/<span class="kbd">↓</span> navigate</span>
@@ -1903,10 +2266,10 @@
 
   <script>
     const sections = [
-      { id: "simulator", label: "Simulator" },
-      { id: "equations", label: "Equations" },
-      { id: "competitive", label: "Matrix" },
-      { id: "rationale", label: "Rationale" }
+      { id: "simulator", label: "Simulator", route: "/tokens-watt-user/simulator" },
+      { id: "equations", label: "Equations", route: "/tokens-watt-user/equations" },
+      { id: "competitive", label: "Matrix", route: "/tokens-watt-user/competitive-matrix" },
+      { id: "rationale", label: "Rationale", route: "/tokens-watt-user/why-akamai-wins" }
     ];
 
     const state = {
@@ -1918,28 +2281,56 @@
       egressReduction: 5
     };
 
+    const atomAppProfile = {
+      appId: "atom-tokens-watt-user",
+      appName: "ATOM Tokens / Watt / User Engine",
+      purpose: "Model AI efficiency, provider fit, and convergence-layer operating leverage.",
+      assistantRole: "Governed operating intelligence for scenario interpretation, next-best actions, draft outputs, and approval-gated execution.",
+      primaryUsers: ["founders", "infrastructure operators", "strategy teams", "revenue and partnership leaders"],
+      coreEntities: ["scenarios", "workloads", "providers", "efficiency levers", "approval actions"],
+      keyMetrics: ["tokens per Wh", "efficiency gain", "annual cost avoidance", "entropy reduction factor"],
+      allowedReads: ["scenario state", "provider matrix", "equation layer", "runtime context"],
+      allowedWrites: ["draft scenario note", "queue board summary", "prepare provider memo", "save action plan"],
+      restrictedActions: ["external send without approval", "destructive record mutation", "high-impact autonomous publish"],
+      approvalRequiredActions: ["board packet generation", "provider recommendation memo", "saved scenario promotion"],
+      responseStyle: "Strategic, direct, action-oriented, systems-operator language.",
+      escalationPolicy: "Escalate whenever confidence is partial, policy requires review, or an action changes a durable business object."
+    };
+
+    let activeSectionId = "sec-simulator";
     let presentationMode = false;
-    let manualTheme = "dark";
+    let manualTheme = null;
 
-    const navEl = document.getElementById("mainNav");
-    const dockEl = document.getElementById("deckDock");
+    const assistantState = {
+      mode: "guide",
+      confidence: "high",
+      lastPrompt: "",
+      recentAssistantActions: ["Initialized ATOM runtime", "Injected app profile", "Loaded route context"],
+      audit: [
+        { title: "Prompt received", detail: "Initialized governed runtime for current scenario." },
+        { title: "Context injected", detail: "Route, role, permissions, and active section bound." }
+      ],
+      lastApprovedAction: null
+    };
 
-    function buildNavigation() {
-      navEl.innerHTML = sections.map((s, index) => `
-        <button class="nav-btn ${index === 0 ? "active" : ""}" type="button" data-target="sec-${s.id}">
-          ${s.label}
-        </button>
+    function buildNav() {
+      const nav = document.getElementById("mainNav");
+      const dock = document.getElementById("dockDots");
+
+      nav.innerHTML = sections.map((s, i) => `
+        <button class="nav-btn ${i === 0 ? "active" : ""}" data-target="sec-${s.id}" type="button">${s.label}</button>
       `).join("");
 
-      dockEl.innerHTML = sections.map((s, index) => `
-        <button class="deck-dot ${index === 0 ? "active" : ""}" type="button" data-target="sec-${s.id}" data-label="${s.label}" aria-label="Go to ${s.label}"></button>
+      dock.innerHTML = sections.map((s, i) => `
+        <button class="dock-dot ${i === 0 ? "active" : ""}" data-target="sec-${s.id}" data-label="${s.label}" type="button" aria-label="Go to ${s.label}"></button>
       `).join("");
 
-      [...navEl.querySelectorAll("[data-target]"), ...dockEl.querySelectorAll("[data-target]"), ...document.querySelectorAll("[data-jump]")].forEach(btn => {
+      [...document.querySelectorAll("[data-target]"), ...document.querySelectorAll("[data-jump]")].forEach(btn => {
         btn.addEventListener("click", () => {
           const id = btn.dataset.target || btn.dataset.jump;
           const el = document.getElementById(id);
           if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+          document.body.classList.remove("assistant-open");
         });
       });
     }
@@ -1960,7 +2351,6 @@
       const tokensPerWh_baseline = avgTokensPerQuery / whPerQuery;
 
       const entropyReductionFactor = Math.log(15) / Math.log(3);
-
       const cacheEnergyReduction = semanticCacheHit / 100;
       const routingFactor = routingEfficiency / 100;
       const egressFactor = egressReduction / 100;
@@ -1993,64 +2383,31 @@
         totalWhMonth,
         tokensPerWh_baseline: Math.round(tokensPerWh_baseline),
         tokensPerWh_withLayer: Math.round(tokensPerWh_withLayer),
-        improvementPercent: improvementPercent.toFixed(1),
-        totalEfficiencyGain: (totalEfficiencyGain * 100).toFixed(1),
+        improvementPercent: Number(improvementPercent.toFixed(1)),
+        totalEfficiencyGain: Number((totalEfficiencyGain * 100).toFixed(1)),
         costSavedYearRaw: costSavedYear,
         costSavedYear: costSavedYear.toLocaleString("en-US", {
           style: "currency",
           currency: "USD",
           maximumFractionDigits: 0
         }),
-        entropyReductionFactor: entropyReductionFactor.toFixed(3),
-        quantumLeakageFactor: (quantumLeakageFactor * 100).toFixed(1),
+        entropyReductionFactor: Number(entropyReductionFactor.toFixed(3)),
+        quantumLeakageFactor: 15,
         trace: {
-          cacheEnergyReduction: (cacheEnergyReduction * 100).toFixed(1),
-          routingFactor: (routingFactor * 100).toFixed(1),
-          egressFactor: (egressFactor * 100).toFixed(1),
-          whPerQuery_baseline: whPerQuery.toFixed(3),
-          whPerQuery_quantumCorrected: whPerQuery_quantumCorrected.toFixed(3),
-          whPerQuery_withLayer: whPerQuery_withLayer.toFixed(3)
+          cacheEnergyReduction: Number((cacheEnergyReduction * 100).toFixed(1)),
+          routingFactor: Number((routingFactor * 100).toFixed(1)),
+          egressFactor: Number((egressFactor * 100).toFixed(1)),
+          whPerQuery_baseline: Number(whPerQuery.toFixed(3)),
+          whPerQuery_quantumCorrected: Number(whPerQuery_quantumCorrected.toFixed(3)),
+          whPerQuery_withLayer: Number(whPerQuery_withLayer.toFixed(3))
         }
       };
     }
 
-    function formatMoneyShort(value) {
-      if (value >= 1e9) return `$${(value / 1e9).toFixed(1)}B`;
-      if (value >= 1e6) return `$${(value / 1e6).toFixed(1)}M`;
-      if (value >= 1e3) return `$${(value / 1e3).toFixed(0)}K`;
-      return `$${Math.round(value)}`;
-    }
-
-    function renderTrace(results) {
-      const avgTokens = state.avgTokensPerQuery;
-      return `
-        <div class="trace-line"><span class="trace-step">Step 1 / Baseline</span></div>
-        <div class="trace-line"><span class="trace-calc">Energy / Query (baseline) = ${results.trace.whPerQuery_baseline} Wh</span></div>
-        <div class="trace-line"><span class="trace-calc">Tokens / Wh (baseline) = ${avgTokens} / ${results.trace.whPerQuery_baseline} = ${results.tokensPerWh_baseline}</span></div>
-
-        <div class="trace-line"><span class="trace-step">Step 2 / Quantum Mechanics Correction</span></div>
-        <div class="trace-line"><span class="trace-calc">Quantum leakage at 4nm process node = ${results.quantumLeakageFactor}%</span></div>
-        <div class="trace-line"><span class="trace-calc">Edge distribution recovery factor = 0.92 (8% leakage recovered)</span></div>
-        <div class="trace-line"><span class="trace-calc">Energy / Query (quantum-corrected) = ${results.trace.whPerQuery_quantumCorrected} Wh</span></div>
-
-        <div class="trace-line"><span class="trace-step">Step 3 / Entropy + Coordination Reduction</span></div>
-        <div class="trace-line"><span class="trace-calc">Semantic cache energy reduction = ${results.trace.cacheEnergyReduction}%</span></div>
-        <div class="trace-line"><span class="trace-calc">Routing efficiency gain = ${results.trace.routingFactor}%</span></div>
-        <div class="trace-line"><span class="trace-calc">Egress elimination = ${results.trace.egressFactor}%</span></div>
-        <div class="trace-line"><span class="trace-calc">Blended efficiency gain = ${results.totalEfficiencyGain}%</span></div>
-
-        <div class="trace-line"><span class="trace-step">Step 4 / Final Output</span></div>
-        <div class="trace-line"><span class="trace-result">Energy / Query (with convergence) = ${results.trace.whPerQuery_withLayer} Wh</span></div>
-        <div class="trace-line"><span class="trace-result">Tokens / Wh (with convergence) = ${avgTokens} / ${results.trace.whPerQuery_withLayer} = ${results.tokensPerWh_withLayer}</span></div>
-        <div class="trace-line"><span class="trace-result">Improvement = +${results.improvementPercent}%</span></div>
-      `;
-    }
-
-    function buildOdometer(el, value, suffix = "") {
-      const str = String(value);
+    function buildOdometer(el, value) {
+      const text = String(value);
       el.innerHTML = "";
-
-      [...str].forEach((char, i) => {
+      [...text].forEach(char => {
         if (!/\d/.test(char)) {
           const sep = document.createElement("span");
           sep.className = "odometer-sep";
@@ -2058,33 +2415,55 @@
           el.appendChild(sep);
           return;
         }
-
         const col = document.createElement("span");
         col.className = "odometer-column";
         for (let n = 0; n <= 9; n++) {
-          const digit = document.createElement("span");
-          digit.textContent = n;
-          col.appendChild(digit);
+          const d = document.createElement("span");
+          d.textContent = n;
+          col.appendChild(d);
         }
         el.appendChild(col);
-
         requestAnimationFrame(() => {
           requestAnimationFrame(() => {
             col.style.transform = `translateY(-${Number(char)}em)`;
           });
         });
       });
-
-      if (suffix) {
-        const suf = document.createElement("span");
-        suf.className = "odometer-sep";
-        suf.textContent = suffix;
-        el.appendChild(suf);
-      }
     }
 
-    function updateAll() {
-      const results = calculate();
+    function moneyShort(v) {
+      if (v >= 1e9) return `$${(v / 1e9).toFixed(1)}B`;
+      if (v >= 1e6) return `$${(v / 1e6).toFixed(1)}M`;
+      if (v >= 1e3) return `$${(v / 1e3).toFixed(0)}K`;
+      return `$${Math.round(v)}`;
+    }
+
+    function renderTrace(results) {
+      return `
+        <div class="trace-line"><span class="trace-step">Step 1 / Baseline</span></div>
+        <div class="trace-line"><span class="trace-calc">Energy / Query (baseline) = ${results.trace.whPerQuery_baseline.toFixed(3)} Wh</span></div>
+        <div class="trace-line"><span class="trace-calc">Tokens / Wh (baseline) = ${state.avgTokensPerQuery} / ${results.trace.whPerQuery_baseline.toFixed(3)} = ${results.tokensPerWh_baseline}</span></div>
+
+        <div class="trace-line"><span class="trace-step">Step 2 / Quantum Mechanics Correction</span></div>
+        <div class="trace-line"><span class="trace-calc">Quantum leakage at 4nm process node = ${results.quantumLeakageFactor}%</span></div>
+        <div class="trace-line"><span class="trace-calc">Edge distribution recovery factor = 0.92 (8% leakage recovered)</span></div>
+        <div class="trace-line"><span class="trace-calc">Energy / Query (quantum-corrected) = ${results.trace.whPerQuery_quantumCorrected.toFixed(3)} Wh</span></div>
+
+        <div class="trace-line"><span class="trace-step">Step 3 / Entropy + Coordination Reduction</span></div>
+        <div class="trace-line"><span class="trace-calc">Semantic cache reduction = ${results.trace.cacheEnergyReduction.toFixed(1)}%</span></div>
+        <div class="trace-line"><span class="trace-calc">Routing efficiency gain = ${results.trace.routingFactor.toFixed(1)}%</span></div>
+        <div class="trace-line"><span class="trace-calc">Egress elimination = ${results.trace.egressFactor.toFixed(1)}%</span></div>
+        <div class="trace-line"><span class="trace-calc">Blended efficiency gain = ${results.totalEfficiencyGain.toFixed(1)}%</span></div>
+
+        <div class="trace-line"><span class="trace-step">Step 4 / Final Output</span></div>
+        <div class="trace-line"><span class="trace-result">Energy / Query (with convergence) = ${results.trace.whPerQuery_withLayer.toFixed(3)} Wh</span></div>
+        <div class="trace-line"><span class="trace-result">Tokens / Wh (with convergence) = ${state.avgTokensPerQuery} / ${results.trace.whPerQuery_withLayer.toFixed(3)} = ${results.tokensPerWh_withLayer}</span></div>
+        <div class="trace-line"><span class="trace-result">Improvement = +${results.improvementPercent.toFixed(1)}%</span></div>
+      `;
+    }
+
+    function updateSimulatorUI() {
+      const r = calculate();
 
       document.getElementById("v-queries").textContent = `${state.monthlyQueries}M`;
       document.getElementById("v-tokens").textContent = `${state.avgTokensPerQuery}`;
@@ -2093,27 +2472,29 @@
       document.getElementById("v-routing").textContent = `${state.routingEfficiency}%`;
       document.getElementById("v-egress").textContent = `${state.egressReduction}%`;
 
-      document.getElementById("heroMetricValue").textContent = results.tokensPerWh_baseline;
-      document.getElementById("heroLiftValue").textContent = `+${results.improvementPercent}%`;
-      document.getElementById("heroCostValue").textContent = formatMoneyShort(results.costSavedYearRaw);
+      document.getElementById("heroMetricValue").textContent = r.tokensPerWh_baseline;
+      document.getElementById("heroLiftValue").textContent = `+${r.improvementPercent.toFixed(1)}%`;
+      document.getElementById("heroCostValue").textContent = moneyShort(r.costSavedYearRaw);
 
-      buildOdometer(document.getElementById("heroOdometer"), results.tokensPerWh_withLayer);
-      buildOdometer(document.getElementById("resultOdometer"), results.tokensPerWh_withLayer);
+      buildOdometer(document.getElementById("heroOdometer"), r.tokensPerWh_withLayer);
+      buildOdometer(document.getElementById("resultOdometer"), r.tokensPerWh_withLayer);
 
-      const deltaText = `+${results.improvementPercent}% improvement vs baseline (${results.tokensPerWh_baseline} tokens/Wh)`;
-      document.getElementById("heroDeltaPill").textContent = deltaText;
-      document.getElementById("resultDeltaPill").textContent = deltaText;
+      const delta = `+${r.improvementPercent.toFixed(1)}% improvement vs baseline (${r.tokensPerWh_baseline} tokens/Wh)`;
+      document.getElementById("heroDeltaPill").textContent = delta;
+      document.getElementById("resultDeltaPill").textContent = delta;
 
-      document.getElementById("miniEfficiency").textContent = `${results.totalEfficiencyGain}%`;
-      document.getElementById("miniCost").textContent = results.costSavedYear;
-      document.getElementById("miniEntropy").textContent = results.entropyReductionFactor;
+      document.getElementById("miniEfficiency").textContent = `${r.totalEfficiencyGain.toFixed(1)}%`;
+      document.getElementById("miniCost").textContent = r.costSavedYear;
+      document.getElementById("miniEntropy").textContent = r.entropyReductionFactor.toFixed(3);
 
-      document.getElementById("traceOutput").innerHTML = renderTrace(results);
+      document.getElementById("traceOutput").innerHTML = renderTrace(r);
 
-      document.getElementById("eqEntropy").innerHTML = `k<sub>B</sub> × ${results.entropyReductionFactor}`;
-      document.getElementById("eqBaseline").textContent = results.tokensPerWh_baseline;
-      document.getElementById("eqConverged").textContent = results.tokensPerWh_withLayer;
-      document.getElementById("eqImprovement").textContent = `+${results.improvementPercent}%`;
+      document.getElementById("eqEntropy").innerHTML = `k<sub>B</sub> × ${r.entropyReductionFactor.toFixed(3)}`;
+      document.getElementById("eqBaseline").textContent = r.tokensPerWh_baseline;
+      document.getElementById("eqConverged").textContent = r.tokensPerWh_withLayer;
+      document.getElementById("eqImprovement").textContent = `+${r.improvementPercent.toFixed(1)}%`;
+
+      updateAssistant();
     }
 
     function bindSliders() {
@@ -2127,119 +2508,357 @@
       };
 
       Object.entries(map).forEach(([id, key]) => {
-        const input = document.getElementById(id);
-        input.addEventListener("input", (e) => {
+        const el = document.getElementById(id);
+        el.addEventListener("input", e => {
           state[key] = parseFloat(e.target.value);
-          updateAll();
+          assistantState.audit.unshift({
+            title: "Scenario updated",
+            detail: `${key} changed to ${e.target.value}.`
+          });
+          assistantState.audit = assistantState.audit.slice(0, 8);
+          updateSimulatorUI();
         });
       });
     }
 
-    function updateActiveNav(id) {
-      document.querySelectorAll(".nav-btn").forEach(btn => {
-        btn.classList.toggle("active", btn.dataset.target === id);
-      });
-      document.querySelectorAll(".deck-dot").forEach(btn => {
-        btn.classList.toggle("active", btn.dataset.target === id);
-      });
+    function getActiveSectionMeta() {
+      const meta = sections.find(s => `sec-${s.id}` === activeSectionId);
+      return meta || sections[0];
     }
 
-    function setupIntersectionObserver() {
-      const options = {
-        root: null,
-        threshold: 0.55
+    function buildContextEnvelope() {
+      const meta = getActiveSectionMeta();
+      const entityMap = {
+        "sec-simulator": "Modeling Scenario",
+        "sec-equations": "Equation Layer",
+        "sec-competitive": "Provider Comparison Matrix",
+        "sec-rationale": "Decision Thesis"
       };
 
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            updateActiveNav(entry.target.id);
-            entry.target.querySelectorAll(".reveal").forEach((el, i) => {
-              setTimeout(() => el.classList.add("in"), i * 50);
-            });
+      return {
+        tenantId: "nirmata-holdings",
+        userId: "chief-quantum-officer",
+        userName: "Chief Quantum Officer",
+        role: "Chief Quantum Officer",
+        permissions: ["read:scenario", "draft:note", "queue:summary", "approve:gated-actions"],
+        route: meta.route,
+        pageTitle: meta.label,
+        selectedEntityType: entityMap[activeSectionId] || "Scenario",
+        selectedEntityIds: ["scenario-live-001"],
+        currentFilters: {
+          workload: `${state.monthlyQueries}M`,
+          tokens: `${state.avgTokensPerQuery}`,
+          energy: `${state.whPerQuery.toFixed(1)}Wh`
+        },
+        recentActions: [
+          `Adjusted cache to ${state.semanticCacheHit}%`,
+          `Adjusted routing to ${state.routingEfficiency}%`,
+          `Adjusted egress to ${state.egressReduction}%`
+        ],
+        recentAssistantActions: assistantState.recentAssistantActions.slice(0, 3)
+      };
+    }
+
+    function responseForMode(prompt = "") {
+      const r = calculate();
+      const meta = getActiveSectionMeta();
+      const ctx = buildContextEnvelope();
+      const promptLower = prompt.toLowerCase();
+
+      let confidence = "high";
+      let answer = "";
+      let evidence = [];
+      let nextAction = "";
+      let execution = "";
+      let actions = [];
+
+      const lowEfficiency = r.improvementPercent < 20;
+      const strongEfficiency = r.improvementPercent >= 25;
+      const lowCache = state.semanticCacheHit < 15;
+      const highWh = state.whPerQuery > 1.4;
+
+      if (assistantState.mode === "explain") {
+        answer =
+          meta.id === "simulator"
+            ? `Current convergence settings raise the modeled output from ${r.tokensPerWh_baseline} to ${r.tokensPerWh_withLayer} tokens per Wh per user, driven mainly by cache elimination first and compounded routing efficiency second.`
+            : meta.id === "equations"
+            ? `This section explains why the simulator is framed as a governed physics model: entropy reduction contracts coordination states, query energy captures work cost, and quantum leakage prevents ideal efficiency at small process nodes.`
+            : meta.id === "competitive"
+            ? `The matrix says Akamai is the strongest total-system fit when the requirement is simultaneous neutral brokerage, edge distribution, and security ownership.`
+            : `The rationale section reduces the recommendation to three structural claims: neutral brokerage, distributed GPU capability, and full-stack perimeter ownership.`;
+
+        evidence = [
+          `Baseline output: ${r.tokensPerWh_baseline} tokens/Wh.`,
+          `Converged output: ${r.tokensPerWh_withLayer} tokens/Wh.`,
+          `Modeled efficiency gain: ${r.totalEfficiencyGain.toFixed(1)}%.`,
+          `Annual avoided cost at current workload: ${r.costSavedYear}.`
+        ];
+
+        nextAction = "Use Guide mode if you want ATOM to recommend which lever to move next.";
+        execution = "Read-only interpretation. No action executed.";
+      }
+
+      if (assistantState.mode === "guide") {
+        answer = lowCache
+          ? `The highest-leverage next move is to raise semantic cache hit rate before pushing routing harder.`
+          : highWh
+          ? `The scenario is being held back by baseline energy per query, so the next move is to reduce compute intensity or improve execution placement.`
+          : `The scenario is already in a strong range; the next move is to convert the current gains into a board-ready operating narrative and provider decision memo.`;
+
+        evidence = [
+          `Semantic cache is currently ${state.semanticCacheHit}% and drives direct compute elimination.`,
+          `Routing gain is ${state.routingEfficiency}% on the non-cached remainder.`,
+          `Egress elimination is ${state.egressReduction}% on the remaining traffic tail.`,
+          `Current modeled improvement is +${r.improvementPercent.toFixed(1)}%.`
+        ];
+
+        nextAction = lowCache
+          ? "Increase semantic cache from 18% toward the mid-20s, then re-evaluate whether routing gains remain the dominant secondary lever."
+          : "Lock the scenario, generate a decision memo, and compare provider fit against the matrix before operationalizing.";
+
+        execution = "Recommendation generated. Approval is only needed if you want ATOM to persist a scenario artifact.";
+      }
+
+      if (assistantState.mode === "copilot") {
+        answer = promptLower.includes("memo")
+          ? `I can draft a provider comparison memo from the current matrix and scenario state.`
+          : `I can draft a board-ready summary of the current scenario, including baseline, improvement, annual value, and the structural recommendation.`;
+
+        evidence = [
+          `Current route: ${ctx.route}.`,
+          `Active entity: ${ctx.selectedEntityType}.`,
+          `Current output: ${r.tokensPerWh_withLayer} tokens/Wh with +${r.improvementPercent.toFixed(1)}% lift.`,
+          `Approval policy requires review before promoting a durable artifact.`
+        ];
+
+        nextAction = "Draft the summary now, then review wording and approve if you want it queued as an artifact.";
+        execution = "Draft-only by default. No durable write has been performed.";
+
+        actions = [
+          {
+            actionId: "draft-board-summary",
+            label: "Draft board summary",
+            description: "Create an executive summary covering baseline, converged output, savings, and recommendation.",
+            riskLevel: "low",
+            requiresApproval: false,
+            targetSystems: ["scenario-runtime"],
+            expectedOutcome: "Board-ready narrative in assistant panel."
+          },
+          {
+            actionId: "queue-provider-memo",
+            label: "Queue provider memo",
+            description: "Prepare a provider memo using the competitive matrix and current scenario state.",
+            riskLevel: "medium",
+            requiresApproval: true,
+            targetSystems: ["decision-workbench"],
+            expectedOutcome: "Approval-gated provider memo artifact."
           }
+        ];
+      }
+
+      if (assistantState.mode === "agent") {
+        confidence = "tentative";
+        answer = "ATOM can execute bounded in-app actions, but durable outputs remain approval-gated by policy.";
+
+        evidence = [
+          `Allowed writes: ${atomAppProfile.allowedWrites.join(", ")}.`,
+          `Restricted actions: ${atomAppProfile.restrictedActions.join(", ")}.`,
+          `Approval-required actions: ${atomAppProfile.approvalRequiredActions.join(", ")}.`,
+          `Current user role includes approval privileges for gated actions.`
+        ];
+
+        nextAction = "Choose a bounded action below. ATOM will either execute immediately if low risk or request approval if medium risk.";
+        execution = "Agent mode active. Waiting for explicit approval or selection.";
+
+        actions = [
+          {
+            actionId: "save-scenario-note",
+            label: "Save scenario note",
+            description: "Store a snapshot note of the current scenario and metrics.",
+            riskLevel: "low",
+            requiresApproval: false,
+            targetSystems: ["scenario-runtime"],
+            expectedOutcome: "Saved scenario note with timestamp."
+          },
+          {
+            actionId: "promote-board-packet",
+            label: "Promote board packet",
+            description: "Convert the current scenario summary into a board packet draft.",
+            riskLevel: "medium",
+            requiresApproval: true,
+            targetSystems: ["board-packet-queue"],
+            expectedOutcome: "Queued board packet draft for review."
+          },
+          {
+            actionId: "publish-provider-recommendation",
+            label: "Publish provider recommendation",
+            description: "Create a durable provider recommendation artifact based on current matrix and scenario logic.",
+            riskLevel: "high",
+            requiresApproval: true,
+            targetSystems: ["decision-workbench", "audit-log"],
+            expectedOutcome: "High-impact recommendation record with full audit trail."
+          }
+        ];
+      }
+
+      if (assistantState.mode === "watchtower") {
+        confidence = lowEfficiency || lowCache || highWh ? "review" : "confirmed";
+        answer = lowEfficiency || lowCache || highWh
+          ? "Watchtower sees a scenario that still has material optimization headroom and should not yet be treated as decision-final."
+          : "Watchtower sees a healthy scenario with strong efficiency lift and no immediate policy or performance alerts.";
+
+        evidence = [
+          `Improvement threshold check: current lift is +${r.improvementPercent.toFixed(1)}%.`,
+          `Cache health check: semantic cache is ${state.semanticCacheHit}%.`,
+          `Energy baseline check: ${state.whPerQuery.toFixed(1)} Wh per query.`,
+          `Current section: ${meta.label}.`
+        ];
+
+        nextAction = lowCache
+          ? "Raise cache effectiveness or revisit prompt reuse patterns before locking the scenario."
+          : strongEfficiency
+          ? "Freeze the model and route to a decision workflow with approval."
+          : "Run another scenario pass and inspect which lever is underperforming.";
+
+        execution = lowEfficiency || lowCache
+          ? "Needs review. Watchtower recommends human confirmation before any durable recommendation."
+          : "Monitoring complete. No blocker detected for draft-level outputs.";
+
+        actions = [
+          {
+            actionId: "open-remediation-plan",
+            label: "Open remediation plan",
+            description: "Prepare a prioritized remediation plan for the underperforming scenario levers.",
+            riskLevel: "low",
+            requiresApproval: false,
+            targetSystems: ["scenario-runtime"],
+            expectedOutcome: "Ranked optimization plan."
+          }
+        ];
+      }
+
+      if (promptLower.includes("risk")) {
+        confidence = "high";
+        answer = lowCache || highWh
+          ? "Current scenario risk is concentrated in cache efficiency and baseline energy cost, not in the convergence math itself."
+          : "Scenario risk is moderate-to-low; the major remaining risk is overcommitting to a provider decision before translating this model into an execution plan.";
+      }
+
+      if (promptLower.includes("board")) {
+        assistantState.mode = "copilot";
+        document.querySelectorAll(".mode-btn").forEach(btn => {
+          btn.classList.toggle("active", btn.dataset.mode === "copilot");
         });
-      }, options);
+        return responseForMode(prompt);
+      }
 
-      document.querySelectorAll(".section").forEach(sec => io.observe(sec));
+      if (actions.length === 0) {
+        actions = [
+          {
+            actionId: "draft-scenario-summary",
+            label: "Draft scenario summary",
+            description: "Prepare a concise summary of the current state, metrics, and recommendation.",
+            riskLevel: "low",
+            requiresApproval: false,
+            targetSystems: ["scenario-runtime"],
+            expectedOutcome: "Structured summary in assistant panel."
+          }
+        ];
+      }
+
+      return { confidence, answer, evidence, nextAction, execution, actions };
     }
 
-    function toggleTheme() {
-      manualTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", manualTheme);
-    }
+    function renderActions(actions) {
+      const list = document.getElementById("actionList");
+      list.innerHTML = actions.map(action => `
+        <li class="action-item">
+          <strong>${action.label}</strong>
+          <div style="margin-top: 6px;">${action.description}</div>
+          <div class="action-meta">
+            <span class="risk-pill ${action.riskLevel}">${action.riskLevel} risk</span>
+            <span class="meta-pill" style="color: var(--color-text-muted); background: rgba(255,255,255,0.03); border-color: var(--color-border);">
+              ${action.requiresApproval ? "Approval required" : "Can run now"}
+            </span>
+          </div>
+          <div style="font-size: 12px; color: var(--color-text-faint);">
+            Outcome: ${action.expectedOutcome}
+          </div>
+          <div class="action-buttons">
+            <button class="tiny-btn primary" type="button" data-run-action="${action.actionId}">${action.requiresApproval ? "Approve" : "Run"}</button>
+            <button class="tiny-btn" type="button" data-preview-action="${action.actionId}">Preview</button>
+          </div>
+        </li>
+      `).join("");
 
-    function sectionList() {
-      return [...document.querySelectorAll(".section")];
-    }
-
-    function currentSectionIndex() {
-      const arr = sectionList();
-      let activeIndex = 0;
-      let best = 0;
-      arr.forEach((sec, idx) => {
-        const rect = sec.getBoundingClientRect();
-        const visible = Math.min(window.innerHeight, rect.bottom) - Math.max(0, rect.top);
-        if (visible > best) {
-          best = visible;
-          activeIndex = idx;
-        }
+      list.querySelectorAll("[data-run-action]").forEach(btn => {
+        btn.addEventListener("click", () => approveAction(btn.dataset.runAction, actions));
       });
-      return activeIndex;
-    }
 
-    function gotoSection(index) {
-      const arr = sectionList();
-      const bounded = Math.max(0, Math.min(arr.length - 1, index));
-      arr[bounded].scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-
-    function togglePresentationMode(force) {
-      presentationMode = typeof force === "boolean" ? force : !presentationMode;
-      document.body.classList.toggle("presentation-mode", presentationMode);
-    }
-
-    function bindControls() {
-      document.getElementById("themeToggle").addEventListener("click", toggleTheme);
-      document.getElementById("presentToggle").addEventListener("click", () => togglePresentationMode());
-
-      document.addEventListener("keydown", (e) => {
-        if (e.key.toLowerCase() === "p") {
-          e.preventDefault();
-          togglePresentationMode();
-        }
-
-        if (e.key === "Escape") {
-          togglePresentationMode(false);
-        }
-
-        if (["ArrowDown", "PageDown", " "].includes(e.key)) {
-          e.preventDefault();
-          gotoSection(currentSectionIndex() + 1);
-        }
-
-        if (["ArrowUp", "PageUp"].includes(e.key)) {
-          e.preventDefault();
-          gotoSection(currentSectionIndex() - 1);
-        }
-
-        if (e.key === "Home") {
-          e.preventDefault();
-          gotoSection(0);
-        }
-
-        if (e.key === "End") {
-          e.preventDefault();
-          gotoSection(sectionList().length - 1);
-        }
+      list.querySelectorAll("[data-preview-action]").forEach(btn => {
+        btn.addEventListener("click", () => previewAction(btn.dataset.previewAction, actions));
       });
     }
 
-    function initTheme() {
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
-      if (!prefersDark) manualTheme = "light";
+    function confidenceClass(key) {
+      if (key === "confirmed") return "confirmed";
+      if (key === "high") return "high";
+      if (key === "tentative") return "tentative";
+      return "review";
     }
+
+    function confidenceText(key) {
+      if (key === "confirmed") return "Confirmed";
+      if (key === "high") return "High confidence";
+      if (key === "tentative") return "Tentative";
+      return "Needs review";
+    }
+
+    function updateAudit() {
+      const list = document.getElementById("auditList");
+      list.innerHTML = assistantState.audit.slice(0, 8).map(item => `
+        <li class="audit-item"><strong>${item.title}</strong><div style="margin-top: 6px;">${item.detail}</div></li>
+      `).join("");
+    }
+
+    function updateContextUI() {
+      const ctx = buildContextEnvelope();
+      document.getElementById("ctxRoute").textContent = ctx.route;
+      document.getElementById("ctxRole").textContent = ctx.role;
+      document.getElementById("ctxEntity").textContent = ctx.selectedEntityType;
+      document.getElementById("ctxPerms").textContent = "Read + draft + approval-gated actions";
+    }
+
+    function updateAssistant(prompt = "") {
+      if (prompt) assistantState.lastPrompt = prompt;
+      const payload = responseForMode(prompt);
+
+      assistantState.confidence = payload.confidence;
+      assistantState.recentAssistantActions.unshift(
+        prompt ? `Processed prompt: "${prompt}"` : `Refreshed assistant state for ${getActiveSectionMeta().label}`
+      );
+      assistantState.recentAssistantActions = assistantState.recentAssistantActions.slice(0, 5);
+
+      const confidencePill = document.getElementById("confidencePill");
+      confidencePill.className = `confidence-pill ${confidenceClass(payload.confidence)}`;
+      confidencePill.textContent = confidenceText(payload.confidence);
+
+      document.getElementById("assistantAnswer").textContent = payload.answer;
+      document.getElementById("assistantEvidence").innerHTML = payload.evidence
+        .map(item => `<li class="evidence-item">${item}</li>`)
+        .join("");
+      document.getElementById("assistantNextAction").textContent = payload.nextAction;
+      document.getElementById("assistantExecutionState").innerHTML = `
+        <span class="confidence-pill ${confidenceClass(payload.confidence)}">${confidenceText(payload.confidence)}</span>
+        <span>${payload.execution}</span>
+      `;
+
+      renderActions(payload.actions);
+      updateContextUI();
+      updateAudit();
+    }
+
+    function approveAction(actionId,
 
     initTheme();
     buildNavigation();
